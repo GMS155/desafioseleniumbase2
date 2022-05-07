@@ -1,3 +1,12 @@
-image: "vimagick/mantisbt:latest"
-stages:
-  - test
+image: rvancea/maven-chrome-jdk8:latest
+
+build:
+  stage: build
+  script:
+    - mvn compile
+
+test:
+  stage: test
+  script:
+    - mvn clean test
+
