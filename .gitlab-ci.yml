@@ -1,13 +1,12 @@
-image: rvancea/maven-chrome-jdk8:latest
-
-build:
-  stage: build
-  script:
-    - mvn compile
+stages:
+  - test
 
 test:
   stage: test
+  tags:
+    - shell
   script:
-    - mvn clean test
-
+    - echo "Teste Automatico"
+    - powershell mvn clean
+    - powershell mvn test
 
