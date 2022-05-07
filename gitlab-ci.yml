@@ -2,11 +2,16 @@ image: rvancea/maven-chrome-jdk8:latest
 
 build:
   stage: build
+  tags:
+    - ci
   script:
     - mvn compile
 
 test:
   stage: test
+  tags:
+    - ci
   script:
     - mvn clean test
+
 
