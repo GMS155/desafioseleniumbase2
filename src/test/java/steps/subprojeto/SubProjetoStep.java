@@ -17,8 +17,8 @@ public class SubProjetoStep extends SubprojetoRun {
     SubProjetoPage subprojeto = new SubProjetoPage();
 
 
-    @Dado("que o usuário tenha feito o login com sucesso")
-    public void queOUsuárioTenhaFeitoOLoginComSucesso() throws InterruptedException {
+    @Dado("que o usuario tenha feito o login com sucesso")
+    public void queOUsuarioTenhaFeitoOLoginComSucesso() throws InterruptedException {
 
 
         loginPage.preendheUsuario("administrator");
@@ -36,8 +36,8 @@ public class SubProjetoStep extends SubprojetoRun {
         projetoPage.clicarBotaoCriarNovoProjeto();
     }
 
-    @E("clicar no botão de cadastrar subProjeto")
-    public void clicarNoBotãoDeCadastrarSubProjeto() throws InterruptedException {
+    @E("clicar no botao de cadastrar subProjeto")
+    public void clicarNoBotaoDeCadastrarSubProjeto() throws InterruptedException {
 
         subprojeto.clicarSubProjeto();
 
@@ -165,8 +165,8 @@ public class SubProjetoStep extends SubprojetoRun {
         projetoPage.clicarhabilitado();
     }
 
-    @Então("o sistema deve efetuar a alteração do habilitado com sucesso")
-    public void oSistemaDeveEfetuarAAlteraçãoDoHabilitadoComSucesso() throws InterruptedException {
+    @Então("o sistema deve efetuar a alteracao do habilitado com sucesso")
+    public void oSistemaDeveEfetuarAAlteracaoDoHabilitadoComSucesso() throws InterruptedException {
 
         Assert.assertNotEquals("Valida alteração habilitado com sucesso", projetoPage.validaProjetoHabilitadoEditadoDesmarcado(), "");
 
@@ -178,8 +178,8 @@ public class SubProjetoStep extends SubprojetoRun {
 
     }
 
-    @Então("o sistema deve efetuar a alteração da visiblidade com sucesso")
-    public void oSistemaDeveEfetuarAAlteraçãoDaVisiblidadeComSucesso() throws InterruptedException {
+    @Então("o sistema deve efetuar a alteracao da visiblidade com sucesso")
+    public void oSistemaDeveEfetuarAAlteracaoDaVisiblidadeComSucesso() throws InterruptedException {
 
         Assert.assertEquals("Valida alteração visibilidade com sucesso", projetoPage.validaProjetoVisibilidadeEditado(), "privado");
 
@@ -191,15 +191,15 @@ public class SubProjetoStep extends SubprojetoRun {
         projetoPage.editaDescricaoProjeto(descricao);
     }
 
-    @Então("o sistema deve efetuar a alteração da descrição com sucesso")
-    public void oSistemaDeveEfetuarAAlteraçãoDaDescriçãoComSucesso() throws InterruptedException {
+    @Então("o sistema deve efetuar a alteracao da descricao com sucesso")
+    public void oSistemaDeveEfetuarAAlteracaoDaDescricaoComSucesso() throws InterruptedException {
 
         Assert.assertEquals("Valida alteração descrição com sucesso", subprojeto.validaSubProjetoDescricaoEditado(), "SubProjeto criado como teste editado");
 
     }
 
-    @E("clicar no botão apagar projeto")
-    public void clicarNoBotãoApagarProjeto() throws InterruptedException {
+    @E("clicar no botao apagar projeto")
+    public void clicarNoBotaoApagarProjeto() throws InterruptedException {
         subprojeto.clicarExcluir();
         subprojeto.clicarExcluir();
     }

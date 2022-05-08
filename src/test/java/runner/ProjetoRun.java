@@ -18,7 +18,7 @@ import org.openqa.selenium.TakesScreenshot;
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )
 
-public class ProjetoRun extends RunBase {
+public class    ProjetoRun extends RunBase {
 
   // static ExtentsReportsUtils extentsReportsUtils = new ExtentsReportsUtils();
 

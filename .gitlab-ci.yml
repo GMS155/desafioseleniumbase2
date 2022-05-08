@@ -4,7 +4,7 @@ stages:
 test:
   stage: test
   tags:
-    - shell
+    - ci
   script:
     - echo "Teste Automatico"
     - powershell mvn clean

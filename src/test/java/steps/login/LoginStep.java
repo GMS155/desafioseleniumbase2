@@ -17,8 +17,8 @@ public class LoginStep extends Run {
     String retornoMensagemErro = "Sua conta pode estar desativada ou bloqueada ou o nome de usuário e a senha que você digitou não estão corretos.";
 
 
-    @Dado("que o usuário preencha o campo usuário corretamente")
-    public void queOUsuárioPreenchaOCampoUsuárioCorretamente() {
+    @Dado("que o usuario preencha o campo usuario corretamente")
+    public void queOUsuarioPreenchaOCampoUsuarioCorretamente() {
         loginPage.preendheUsuario("administrator");
 
     }
@@ -31,8 +31,8 @@ public class LoginStep extends Run {
     }
 
 
-    @Quando("é clicado no botão Login")
-    public void éClicadoNoBotãoLogin() throws InterruptedException {
+    @Quando("e clicado no botao Login")
+    public void eClicadoNoBotaoLogin() throws InterruptedException {
         loginPage.clicarBotaoLogin();
     }
 
@@ -56,63 +56,63 @@ public class LoginStep extends Run {
     }
 
 
-    @Dado("que o usuário esteja na página de login do Testlink")
-    public void queOUsuárioEstejaNaPáginaDeLoginDoTestlink() throws InterruptedException {
+    @Dado("que o usuario esteja na pagina de login do Testlink")
+    public void queOUsuarioEstejaNaPaginaDeLoginDoTestlink() throws InterruptedException {
 
     }
 
 
-    @Dado("preencha o campo senha com valor inválido")
-    public void preenchaOCampoSenhaComValorInválido() {
+    @Dado("preencha o campo senha com valor invalido")
+    public void preenchaOCampoSenhaComValorInvalido() {
         loginPage.preencheSenha("123456");
     }
 
 
-    @Então("a aplicação deve emitir uma mensagem de erro")
-    public void aAplicaçãoDeveEmitirUmaMensagemDeErro() {
+    @Então("a aplicacao deve emitir uma mensagem de erro")
+    public void aAplicacaoDeveEmitirUmaMensagemDeErro() {
 
         Assert.assertEquals(retornoMensagemErro, loginPage.mensagemErroLogin());
     }
 
 
-    @Dado("que o usuário preencha o campo usuário com valor inválido")
-    public void queOUsuárioPreenchaOCampoUsuárioComValorInválido() {
+    @Dado("que o usuario preencha o campo usuario com valor invalido")
+    public void queOUsuarioPreenchaOCampoUsuarioComValorInvalido() {
         loginPage.preendheUsuario("guilherme");
     }
 
 
-    @Então("a aplicação deve permanecer na tela de login")
-    public void aAplicaçãoDevePermanecerNaTelaDeLogin() {
+    @Então("a aplicacao deve permanecer na tela de login")
+    public void aAplicacaoDevePermanecerNaTelaDeLogin() {
         Boolean TestVisible = getDriver().findElement(By.id("tl_login_button")).isDisplayed();
         Assert.assertTrue(TestVisible);
     }
 
-    @Dado("que o usuário esteja na página de login do Mantis")
-    public void queOUsuárioEstejaNaPáginaDeLoginDoMantis() throws InterruptedException {
+    @Dado("que o usuario esteja na pagina de login do Mantis")
+    public void queOUsuarioEstejaNaPaginaDeLoginDoMantis() throws InterruptedException {
 
         loginPage.acessarAplicacao();
     }
 
-    @E("clique no botão Entrar")
-    public void cliqueNoBotãoEntrar() throws InterruptedException {
+    @E("clique no botao Entrar")
+    public void cliqueNoBotaoEntrar() throws InterruptedException {
 
         loginPage.clicarBotaoEntrar();
     }
 
-    @Quando("é clicado no botão Entrar")
-    public void éClicadoNoBotãoEntrar() throws InterruptedException {
+    @Quando("e clicado no botao Entrar")
+    public void eClicadoNoBotaoEntrar() throws InterruptedException {
 
         loginPage.clicarBotaoEntrar();
     }
 
-    @Quando("é clicado no botão Entrar novamente")
-    public void éClicadoNoBotãoEntrarNovamente() throws InterruptedException {
+    @Quando("e clicado no botao Entrar novamente")
+    public void eClicadoNoBotaoEntrarNovamente() throws InterruptedException {
 
         loginPage.clicarBotaoEntrar();
     }
 
-    @Quando("que o usuário preencha o campo usuário e senha")
-    public void queOUsuárioPreenchaOCampoUsuárioESenha() {
+    @Quando("que o usuario preencha o campo usuario e senha")
+    public void queOUsuarioPreenchaOCampoUsuarioESenha() {
 
         loginPage.preenchereUsuarioJS("administrator");
         loginPage.clicarEntrarJS();

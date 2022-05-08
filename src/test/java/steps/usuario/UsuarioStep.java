@@ -17,14 +17,14 @@ public class UsuarioStep {
     LoginPage loginPage = new LoginPage();
     UsuarioPage usuarioPage = new UsuarioPage();
 
-    @Dado("que o usuário esteja na página de login do Mantis")
-    public void queOUsuárioEstejaNaPáginaDeLoginDoMantis() throws InterruptedException {
+    @Dado("que o usuario esteja na pagina de login do Mantis")
+    public void queOUsuarioEstejaNaPaginaDeLoginDoMantis() throws InterruptedException {
 
         loginPage.acessarAplicacao();
     }
 
-    @Dado("que o usuário tenha feito o login com sucesso")
-    public void queOUsuárioTenhaFeitoOLoginComSucesso() throws InterruptedException {
+    @Dado("que o usuario tenha feito o login com sucesso")
+    public void queOUsuarioTenhaFeitoOLoginComSucesso() throws InterruptedException {
 
         loginPage.preendheUsuario("administrator");
         loginPage.clicarBotaoEntrar();
@@ -32,8 +32,8 @@ public class UsuarioStep {
         loginPage.clicarBotaoEntrar();
     }
 
-    @Quando("acessar a tela de criação de usuário")
-    public void acessarATelaDeCriaçãoDeUsuário() throws InterruptedException {
+    @Quando("acessar a tela de criacao de usuario")
+    public void acessarATelaDeCriacaoDeUsuario() throws InterruptedException {
 
         usuarioPage.clicarBotaoGerenciar();
         usuarioPage.clicarBotaoGerenciarUsuarios();
@@ -41,14 +41,14 @@ public class UsuarioStep {
     }
 
 
-    @E("preencher o nome de usuário {string}")
-    public void preencherONomeDeUsuário(String nome) throws InterruptedException {
+    @E("preencher o nome de usuario {string}")
+    public void preencherONomeDeUsuario(String nome) throws InterruptedException {
 
         usuarioPage.preencherNomeUsuario(nome);
     }
 
-    @E("preencher o nome verdadeiro do usuário {string}")
-    public void preencherONomeVerdadeiroDoUsuário(String nomeVerdadeiro) throws InterruptedException {
+    @E("preencher o nome verdadeiro do usuario {string}")
+    public void preencherONomeVerdadeiroDoUsuario(String nomeVerdadeiro) throws InterruptedException {
 
         usuarioPage.preencherNomeUsuarioVerdadeiro(nomeVerdadeiro);
     }
@@ -60,20 +60,20 @@ public class UsuarioStep {
     }
 
 
-    @E("preencher o nível de acesso")
-    public void preencherONívelDeAcesso() throws InterruptedException {
+    @E("preencher o nivel de acesso")
+    public void preencherONivelDeAcesso() throws InterruptedException {
 
         usuarioPage.preencherNivelAcesso("visualizador");
     }
 
-    @E("selecionar a opção protegido")
-    public void selecionarAOpçãoProtegido() {
+    @E("selecionar a opcao protegido")
+    public void selecionarAOpcaoProtegido() {
 
         usuarioPage.clicarProtegido();
     }
 
-    @E("clicar no botão de criar usuário")
-    public void clicarNoBotãoDeCriarUsuário() throws InterruptedException {
+    @E("clicar no botao de criar usuario")
+    public void clicarNoBotaoDeCriarUsuario() throws InterruptedException {
 
         usuarioPage.clicarAdicionarUsuario();
     }
@@ -101,8 +101,8 @@ public class UsuarioStep {
     }
 
 
-    @Então("o sistema deve emitir uma mensagem de erro do usuário sem nome")
-    public void oSistemaDeveEmitirUmaMensagemDeErroDoUsuárioSemNome() throws InterruptedException {
+    @Então("o sistema deve emitir uma mensagem de erro do usuario sem nome")
+    public void oSistemaDeveEmitirUmaMensagemDeErroDoUsuarioSemNome() throws InterruptedException {
 
         Assert.assertEquals("Valida mensagem Erro sem nome", usuarioPage.vericaUsuarioSemNome(), "APPLICATION ERROR #805");
 
@@ -124,22 +124,22 @@ public class UsuarioStep {
     }
 
 
-    @Então("o sistema deve efetuar o cadastro com número com sucesso")
-    public void oSistemaDeveEfetuarOCadastroComNúmeroComSucesso() throws InterruptedException {
+    @Então("o sistema deve efetuar o cadastro com numero com sucesso")
+    public void oSistemaDeveEfetuarOCadastroComNumeroComSucesso() throws InterruptedException {
 
         ArrayList<String> list = usuarioPage.validaUsuarioNomeComNumero();
         Assert.assertEquals("Valida cadastro com caractere especial com sucesso", list.get(0), "123456789");
 
     }
 
-    @E("clicar no campo usuário {string}")
-    public void clicarNoCampoUsuário(String usuario) throws InterruptedException {
+    @E("clicar no campo usuario {string}")
+    public void clicarNoCampoUsuario(String usuario) throws InterruptedException {
 
         usuarioPage.clicarUsuario(usuario);
     }
 
-    @E("clicar no botão de atualizar usuário")
-    public void clicarNoBotãoDeAtualizarUsuário() throws InterruptedException {
+    @E("clicar no botao de atualizar usuario")
+    public void clicarNoBotaoDeAtualizarUsuario() throws InterruptedException {
 
         usuarioPage.clicarAdicionarUsuario();
 
@@ -155,15 +155,15 @@ public class UsuarioStep {
 
     }
 
-    @Quando("acessar a tela dos usuários cadastrados")
-    public void acessarATelaDosUsuáriosCadastrados() throws InterruptedException {
+    @Quando("acessar a tela dos usuarios cadastrados")
+    public void acessarATelaDosUsuariosCadastrados() throws InterruptedException {
 
         usuarioPage.clicarBotaoGerenciar();
         usuarioPage.clicarBotaoGerenciarUsuarios();
     }
 
-    @E("editar o nome de usuário {string}")
-    public void editarONomeDeUsuário(String nome) throws InterruptedException {
+    @E("editar o nome de usuario {string}")
+    public void editarONomeDeUsuario(String nome) throws InterruptedException {
 
         usuarioPage.editaNomeUsuario(nome);
     }
@@ -201,8 +201,8 @@ public class UsuarioStep {
         Assert.assertEquals("Valida edição nome em branco", usuarioPage.vericaUsuarioComMesmoNome(), "APPLICATION ERROR #800");
     }
 
-    @E("editar o nível de acesso {string}")
-    public void editarONívelDeAcesso(String nivel) throws InterruptedException {
+    @E("editar o nivel de acesso {string}")
+    public void editarONivelDeAcesso(String nivel) throws InterruptedException {
 
         usuarioPage.editaNivel(nivel);
     }
@@ -215,8 +215,8 @@ public class UsuarioStep {
 
     }
 
-    @E("clicar no botão apagar usuário")
-    public void clicarNoBotãoApagarUsuário() throws InterruptedException {
+    @E("clicar no botao apagar usuario")
+    public void clicarNoBotaoApagarUsuario() throws InterruptedException {
 
         usuarioPage.clicarExcluir();
     }

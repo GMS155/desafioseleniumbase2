@@ -18,14 +18,14 @@ public class PerfilStep {
     PerfilPage perfilPage = new PerfilPage();
 
 
-    @Dado("que o usuário esteja na página de login do Mantis")
-    public void queOUsuárioEstejaNaPáginaDeLoginDoMantis() throws InterruptedException {
+    @Dado("que o usuario esteja na pagina de login do Mantis")
+    public void queOUsuarioEstejaNaPaginaDeLoginDoMantis() throws InterruptedException {
 
         loginPage.acessarAplicacao();
     }
 
-    @Dado("que o usuário tenha feito o login com sucesso")
-    public void queOUsuárioTenhaFeitoOLoginComSucesso() throws InterruptedException {
+    @Dado("que o usuario tenha feito o login com sucesso")
+    public void queOUsuarioTenhaFeitoOLoginComSucesso() throws InterruptedException {
 
 
         loginPage.preendheUsuario("administrator");
@@ -56,8 +56,8 @@ public class PerfilStep {
     }
 
 
-    @E("preencher a versão do SO corretamente")
-    public void preencherAVersãoDoSOCorretamente() throws InterruptedException {
+    @E("preencher a versao do SO corretamente")
+    public void preencherAVersaoDoSOCorretamente() throws InterruptedException {
 
         perfilPage.preencherVersao("2.14.1");
     }
@@ -69,8 +69,8 @@ public class PerfilStep {
         perfilPage.preencherDescricao("Novo versão do sistema operacional!");
     }
 
-    @E("clicar no botão adicionar perfil")
-    public void clicarNoBotãoAdicionarPerfil() throws InterruptedException {
+    @E("clicar no botao adicionar perfil")
+    public void clicarNoBotaoAdicionarPerfil() throws InterruptedException {
 
         perfilPage.clicarBotaoAdicionarPerfil();
     }
@@ -104,14 +104,14 @@ public class PerfilStep {
         perfilPage.preencherSO("");
     }
 
-    @E("e deixar o campo versão SO em branco")
-    public void eDeixarOCampoVersãoSOEmBranco() throws InterruptedException {
+    @E("e deixar o campo versao SO em branco")
+    public void eDeixarOCampoVersaoSOEmBranco() throws InterruptedException {
 
         perfilPage.preencherVersao("");
     }
 
-    @E("clicar no botão apagar")
-    public void clicarNoBotãoApagar() throws InterruptedException {
+    @E("clicar no botao apagar")
+    public void clicarNoBotaoApagar() throws InterruptedException {
 
         perfilPage.clicarBotaoApagarPerfis();
     }
