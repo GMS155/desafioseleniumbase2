@@ -5,17 +5,17 @@ Funcionalidade: Gerenciamento de perfis globais
   Para adicionar um pefil para o sistema
 
   Contexto:
-    Dado que o usuário esteja na página de login do Mantis
-    E que o usuário tenha feito o login com sucesso
+    Dado que o usuario esteja na pagina de login do Mantis
+    E que o usuario tenha feito o login com sucesso
 
   @SoEsse
   Cenário: Adicionar um perfil com sucesso
     Quando acessar a tela de gerenciar perfil
     E preencher a plataforma corretamente
     E preencher o SO corretamente
-    E preencher a versão do SO corretamente
+    E preencher a versao do SO corretamente
     E preencher a descricao do sistema corretamente
-    E clicar no botão adicionar perfil
+    E clicar no botao adicionar perfil
     Então o sistema deve cadastrar o perfil com sucesso
 
 
@@ -23,9 +23,9 @@ Funcionalidade: Gerenciamento de perfis globais
     Quando acessar a tela de gerenciar perfil
     E deixar o campo plataforma em branco
     E preencher o SO corretamente
-    E preencher a versão do SO corretamente
+    E preencher a versao do SO corretamente
     E preencher a descricao do sistema corretamente
-    E clicar no botão adicionar perfil
+    E clicar no botao adicionar perfil
     Então o sistema deve permanecer na mesma tela de cadastro
 
 
@@ -33,9 +33,9 @@ Funcionalidade: Gerenciamento de perfis globais
     Quando acessar a tela de gerenciar perfil
     E preencher a plataforma corretamente
     E deixar o campo SO em branco
-    E preencher a versão do SO corretamente
+    E preencher a versao do SO corretamente
     E preencher a descricao do sistema corretamente
-    E clicar no botão adicionar perfil
+    E clicar no botao adicionar perfil
     Então o sistema deve permanecer na mesma tela de cadastro
 
 
@@ -43,13 +43,13 @@ Funcionalidade: Gerenciamento de perfis globais
     Quando acessar a tela de gerenciar perfil
     E preencher a plataforma corretamente
     E preencher o SO corretamente
-    E e deixar o campo versão SO em branco
+    E e deixar o campo versao SO em branco
     E preencher a descricao do sistema corretamente
-    E clicar no botão adicionar perfil
+    E clicar no botao adicionar perfil
     Então o sistema deve permanecer na mesma tela de cadastro
 
 
   Cenário: Excluir perfil com sucesso
     Quando acessar a tela de gerenciar perfil
-    E clicar no botão apagar
+    E clicar no botao apagar
     Então o sistema deve excluir o perfil desejado corretamente

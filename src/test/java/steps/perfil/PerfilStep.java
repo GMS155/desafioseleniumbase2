@@ -1,9 +1,6 @@
 package steps.perfil;
 
-import io.cucumber.java.pt.Dado;
-import io.cucumber.java.pt.E;
-import io.cucumber.java.pt.Então;
-import io.cucumber.java.pt.Quando;
+import io.cucumber.java.pt.*;
 import org.junit.Assert;
 import pages.LoginPage;
 import pages.PerfilPage;
@@ -75,7 +72,7 @@ public class PerfilStep {
         perfilPage.clicarBotaoAdicionarPerfil();
     }
 
-    @Então("o sistema deve cadastrar o perfil com sucesso")
+    @Entao("o sistema deve cadastrar o perfil com sucesso")
     public void oSistemaDeveCadastrarOPerfilComSucesso() {
         ArrayList<String> list = perfilPage.valisdaPerfilCriado();
 
@@ -86,7 +83,7 @@ public class PerfilStep {
     }
 
 
-    @Então("o sistema deve permanecer na mesma tela de cadastro")
+    @Entao("o sistema deve permanecer na mesma tela de cadastro")
     public void oSistemaDevePermanecerNaMesmaTelaDeCadastro() throws InterruptedException {
 
         perfilPage.verificaTelaAdicionaPerfil();
@@ -116,7 +113,7 @@ public class PerfilStep {
         perfilPage.clicarBotaoApagarPerfis();
     }
 
-    @Então("o sistema deve excluir o perfil desejado corretamente")
+    @Entao("o sistema deve excluir o perfil desejado corretamente")
     public void oSistemaDeveExcluirOPerfilDesejadoCorretamente() throws InterruptedException {
 
 

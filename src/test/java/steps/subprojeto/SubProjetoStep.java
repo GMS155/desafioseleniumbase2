@@ -1,9 +1,6 @@
 package steps.subprojeto;
 
-import io.cucumber.java.pt.Dado;
-import io.cucumber.java.pt.E;
-import io.cucumber.java.pt.Então;
-import io.cucumber.java.pt.Quando;
+import io.cucumber.java.pt.*;
 import org.junit.Assert;
 import pages.LoginPage;
 import pages.ProjetoPage;
@@ -86,7 +83,7 @@ public class SubProjetoStep extends SubprojetoRun {
 
     }
 
-    @Então("o sistema deve efetuar o cadastro do subprojeto com sucesso")
+    @Entao("o sistema deve efetuar o cadastro do subprojeto com sucesso")
     public void oSistemaDeveEfetuarOCadastroDoSubprojetoComSucesso() throws InterruptedException {
 
         Assert.assertEquals("Valida cadastro subprojeto com sucesso", subprojeto.validaSubProjetoCriado(), "» Subprojeto 02");
@@ -94,7 +91,7 @@ public class SubProjetoStep extends SubprojetoRun {
 
     }
 
-    @Então("o sistema deve efetuar o cadastro do subprojeto editado com sucesso")
+    @Entao("o sistema deve efetuar o cadastro do subprojeto editado com sucesso")
     public void oSistemaDeveEfetuarOCadastroDoSubprojetoEditadoComSucesso() throws InterruptedException {
 
         Assert.assertEquals("Valida cadastro projeto com sucesso", projetoPage.validaProjetoNomeEditado(), "» Subprojeto 02 editado");
@@ -114,27 +111,27 @@ public class SubProjetoStep extends SubprojetoRun {
         projetoPage.clicarProjetoNovamente(projeto);
     }
 
-    @Então("o sistema deve emitir uma mensagem de erro")
+    @Entao("o sistema deve emitir uma mensagem de erro")
     public void oSistemaDeveEmitirUmaMensagemDeErro() throws InterruptedException {
 
         Assert.assertEquals("Valida mensagem Erro nome igual", projetoPage.vericaProjetoComMesmoNome(), "APPLICATION ERROR #701");
 
     }
 
-    @Então("o sistema deve permanecer na mesma tela de cadastro")
+    @Entao("o sistema deve permanecer na mesma tela de cadastro")
     public void oSistemaDevePermanecerNaMesmaTelaDeCadastro() throws InterruptedException {
 
         subprojeto.verificaTelaAdicionaSubProjeto();
     }
 
-    @Então("o sistema deve efetuar o cadastro do subprojeto com número com sucesso")
+    @Entao("o sistema deve efetuar o cadastro do subprojeto com número com sucesso")
     public void oSistemaDeveEfetuarOCadastroDoSubprojetoComNúmeroComSucesso() throws InterruptedException {
         Assert.assertEquals("Valida cadastro subprojeto com sucesso", subprojeto.validaSubProjetoCriadoComNumero(), "» 123456789");
 
 
     }
 
-    @Então("o sistema deve efetuar o cadastro do subprojeto com caracter especial com sucesso")
+    @Entao("o sistema deve efetuar o cadastro do subprojeto com caracter especial com sucesso")
     public void oSistemaDeveEfetuarOCadastroDoSubprojetoComCaracterEspecialComSucesso() throws InterruptedException {
         Assert.assertEquals("Valida cadastro subprojeto com sucesso", subprojeto.validaSubProjetoCriadoComCaracterEspecial(), "» #$#$%#%&*(!!_>");
 
@@ -147,13 +144,13 @@ public class SubProjetoStep extends SubprojetoRun {
 
     }
 
-    @Então("o sistema deve realizar o cadastro do subprojeto com estado editado com sucesso")
+    @Entao("o sistema deve realizar o cadastro do subprojeto com estado editado com sucesso")
     public void oSistemaDeveRealizarOCadastroDoSubprojetoComEstadoEditadoComSucesso() {
 
 
     }
 
-    @Então("o sistema deve realizar o cadastro do subprojeto com {} com sucesso")
+    @Entao("o sistema deve realizar o cadastro do subprojeto com {} com sucesso")
     public void oSistemaDeveRealizarOCadastroDoSubprojetoComEstadoEditadoComSucesso(String estado) throws InterruptedException {
 
         Assert.assertEquals("Valida edição estado com sucesso", projetoPage.validaEstadoEditado(estado), estado);
@@ -165,7 +162,7 @@ public class SubProjetoStep extends SubprojetoRun {
         projetoPage.clicarhabilitado();
     }
 
-    @Então("o sistema deve efetuar a alteracao do habilitado com sucesso")
+    @Entao("o sistema deve efetuar a alteracao do habilitado com sucesso")
     public void oSistemaDeveEfetuarAAlteracaoDoHabilitadoComSucesso() throws InterruptedException {
 
         Assert.assertNotEquals("Valida alteração habilitado com sucesso", projetoPage.validaProjetoHabilitadoEditadoDesmarcado(), "");
@@ -178,7 +175,7 @@ public class SubProjetoStep extends SubprojetoRun {
 
     }
 
-    @Então("o sistema deve efetuar a alteracao da visiblidade com sucesso")
+    @Entao("o sistema deve efetuar a alteracao da visiblidade com sucesso")
     public void oSistemaDeveEfetuarAAlteracaoDaVisiblidadeComSucesso() throws InterruptedException {
 
         Assert.assertEquals("Valida alteração visibilidade com sucesso", projetoPage.validaProjetoVisibilidadeEditado(), "privado");
@@ -191,7 +188,7 @@ public class SubProjetoStep extends SubprojetoRun {
         projetoPage.editaDescricaoProjeto(descricao);
     }
 
-    @Então("o sistema deve efetuar a alteracao da descricao com sucesso")
+    @Entao("o sistema deve efetuar a alteracao da descricao com sucesso")
     public void oSistemaDeveEfetuarAAlteracaoDaDescricaoComSucesso() throws InterruptedException {
 
         Assert.assertEquals("Valida alteração descrição com sucesso", subprojeto.validaSubProjetoDescricaoEditado(), "SubProjeto criado como teste editado");
@@ -204,7 +201,7 @@ public class SubProjetoStep extends SubprojetoRun {
         subprojeto.clicarExcluir();
     }
 
-    @Então("o sistema deve excluir com sucesso")
+    @Entao("o sistema deve excluir com sucesso")
     public void oSistemaDeveExcluirComSucesso() throws InterruptedException {
 
         Assert.assertNotEquals("Valida exclusão com sucesso",subprojeto.validaSubProjetoExcluido(), "Subprojeto 02");

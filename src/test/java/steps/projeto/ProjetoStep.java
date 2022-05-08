@@ -3,10 +3,7 @@ package steps.projeto;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Scenario;
-import io.cucumber.java.pt.Dado;
-import io.cucumber.java.pt.E;
-import io.cucumber.java.pt.Então;
-import io.cucumber.java.pt.Quando;
+import io.cucumber.java.pt.*;
 import org.junit.Assert;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -56,7 +53,7 @@ public class ProjetoStep extends ProjetoRun {
         projetoPage.clicarBotaoAdicionarProjeto();
     }
 
-    @Então("o sistema deve permanecer na mesma tela de cadastro")
+    @Entao("o sistema deve permanecer na mesma tela de cadastro")
     public void oSistemaDevePermanecerNaMesmaTelaDeCadastro() throws InterruptedException {
 
         projetoPage.verificaTelaAdicionaProjeto();
@@ -85,7 +82,7 @@ public class ProjetoStep extends ProjetoRun {
     }
 
 
-    @Então("o sistema deve efetuar o cadastro com sucesso")
+    @Entao("o sistema deve efetuar o cadastro com sucesso")
     public void oSistemaDeveEfetuarOCadastroComSucesso() throws InterruptedException {
         ArrayList<String> list = projetoPage.validaProjetoCriado();
 
@@ -98,7 +95,7 @@ public class ProjetoStep extends ProjetoRun {
 
     }
 
-    @Então("o sistema deve efetuar o cadastro editado com sucesso")
+    @Entao("o sistema deve efetuar o cadastro editado com sucesso")
     public void oSistemaDeveEfetuarOCadastroEditadoComSucesso() throws InterruptedException {
 
         Assert.assertEquals("Valida cadastro projeto com sucesso", projetoPage.validaProjetoNomeEditado(), "Teste projeto SQL 01_Editao");
@@ -118,7 +115,7 @@ public class ProjetoStep extends ProjetoRun {
         projetoPage.clicarBotaoAdicionarProjeto();
     }
 
-    @Então("o sistema deve emitir uma mensagem de erro")
+    @Entao("o sistema deve emitir uma mensagem de erro")
     public void oSistemaDeveEmitirUmaMensagemDeErro() throws InterruptedException {
 
         Assert.assertEquals("Valida mensagem Erro nome igual", projetoPage.vericaProjetoComMesmoNome(), "APPLICATION ERROR #701");
@@ -131,7 +128,7 @@ public class ProjetoStep extends ProjetoRun {
         projetoPage.preencherNomeProjeto("*&!##@@&^-");
     }
 
-    @Então("o sistema deve efetuar o cadastro do caractere especial com sucesso")
+    @Entao("o sistema deve efetuar o cadastro do caractere especial com sucesso")
     public void oSistemaDeveEfetuarOCadastroDoCaractereEspecialComSucesso() throws InterruptedException {
 
         ArrayList<String> list = projetoPage.validaProjetoCriadoComCaractereEspecial();
@@ -144,7 +141,7 @@ public class ProjetoStep extends ProjetoRun {
         projetoPage.preencherNomeProjeto("8989448489846546");
     }
 
-    @Então("o sistema deve efetuar o cadastro do numero com sucesso")
+    @Entao("o sistema deve efetuar o cadastro do numero com sucesso")
     public void oSistemaDeveEfetuarOCadastroDoNumeroComSucesso() throws InterruptedException {
 
         ArrayList<String> list = projetoPage.validaProjetoCriadoComNumero();
@@ -181,7 +178,7 @@ public class ProjetoStep extends ProjetoRun {
 
     }
 
-    @Então("o sistema deve efetuar o cadastro do {} editado com sucesso")
+    @Entao("o sistema deve efetuar o cadastro do {} editado com sucesso")
     public void oSistemaDeveEfetuarOCadastroDoEstadoEditadoComSucesso(String estado) throws InterruptedException {
 
         Assert.assertEquals("Valida edição estado com sucesso", projetoPage.validaEstadoEditado(estado), estado);
@@ -193,7 +190,7 @@ public class ProjetoStep extends ProjetoRun {
         projetoPage.clicarhabilitado();
     }
 
-    @Então("o sistema deve efetuar a alteracao do habilitado com sucesso")
+    @Entao("o sistema deve efetuar a alteracao do habilitado com sucesso")
     public void oSistemaDeveEfetuarAAlteracaoDoHabilitadoComSucesso() throws InterruptedException {
 
         Assert.assertEquals("Valida alteração habilitado com sucesso", projetoPage.validaProjetoHabilitadoEditado(), "");
@@ -207,7 +204,7 @@ public class ProjetoStep extends ProjetoRun {
         projetoPage.selecionaVisibilidade(visibilidade);
     }
 
-    @Então("o sistema deve efetuar a alteracao da visibilidade com sucesso")
+    @Entao("o sistema deve efetuar a alteracao da visibilidade com sucesso")
     public void oSistemaDeveEfetuarAAlteracaoDaVisibilidadeComSucesso() throws InterruptedException {
 
         Assert.assertEquals("Valida alteração visibilidade com sucesso", projetoPage.validaProjetoVisibilidadeEditado(), "privado");
@@ -222,7 +219,7 @@ public class ProjetoStep extends ProjetoRun {
 
     }
 
-    @Então("o sistema deve efetuar a alteracao da descricao com sucesso")
+    @Entao("o sistema deve efetuar a alteracao da descricao com sucesso")
     public void oSistemaDeveEfetuarAAlteracaoDaDescricaoComSucesso() throws InterruptedException {
 
         Assert.assertEquals("Valida alteração visibilidade com sucesso", projetoPage.validaProjetoDescricaoEditado(), "Projeto criado e alterado com sucesso");
@@ -240,7 +237,7 @@ public class ProjetoStep extends ProjetoRun {
         projetoPage.clicarExcluir();
     }
 
-    @Então("o sistema deve excluir com sucesso")
+    @Entao("o sistema deve excluir com sucesso")
     public void oSistemaDeveExcluirComSucesso() throws InterruptedException {
 
         Assert.assertNotEquals("Valida alteração visibilidade com sucesso",projetoPage.validaProjetoExcluido(), "Teste projeto SQL 06");

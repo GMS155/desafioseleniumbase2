@@ -5,13 +5,13 @@ Funcionalidade: Criação de subprojetos
   Para criar um subprojeto
 
   Contexto:
-    Dado que o usuário esteja na página de login do Mantis
-    E que o usuário tenha feito o login com sucesso
+    Dado que o usuario esteja na pagina de login do Mantis
+    E que o usuario tenha feito o login com sucesso
 
 
   Esquema do Cenário: Criar um subprojeto com sucesso
     Quando clicar no projeto desejado "Teste projeto SQL 02"
-    E clicar no botão de cadastrar subProjeto
+    E clicar no botao de cadastrar subProjeto
     E preencher o nome do subprojeto "Subprojeto 02"
     E definir o estado do subprojeto <estado>
     E marcar a opcao herdar categorias globais
@@ -29,31 +29,31 @@ Funcionalidade: Criação de subprojetos
 
   Cenário: Criar um subprojeto sem nome
     Quando clicar no projeto desejado "Teste projeto SQL 02"
-    E clicar no botão de cadastrar subProjeto
+    E clicar no botao de cadastrar subProjeto
     E clicar no botão de salvar subprojeto
     Então o sistema deve permanecer na mesma tela de cadastro
 
   Cenário: Criar um subprojeto com o mesmo nome do subprojeto
     Quando clicar no projeto desejado "Teste projeto SQL 02"
-    E clicar no botão de cadastrar subProjeto
+    E clicar no botao de cadastrar subProjeto
     E preencher o nome do subprojeto "Subprojeto 02"
     E clicar no botão de salvar subprojeto
     E clicar no projeto desejado "Teste projeto SQL 02" novamente
-    E clicar no botão de cadastrar subProjeto
+    E clicar no botao de cadastrar subProjeto
     E preencher o nome do subprojeto "Subprojeto 02"
     E clicar no botão de salvar subprojeto
     Então o sistema deve emitir uma mensagem de erro
 
   Cenário: Criar um subprojeto com o mesmo nome do projeto
     Quando clicar no projeto desejado "Teste projeto SQL 02"
-    E clicar no botão de cadastrar subProjeto
+    E clicar no botao de cadastrar subProjeto
     E preencher o nome do subprojeto "Teste projeto SQL 02"
     E clicar no botão de salvar subprojeto
     Então o sistema deve emitir uma mensagem de erro
 
   Esquema do Cenário: Criar um subprojeto com número no nome
     Quando clicar no projeto desejado "Teste projeto SQL 02"
-    E clicar no botão de cadastrar subProjeto
+    E clicar no botao de cadastrar subProjeto
     E preencher o nome do subprojeto "123456789"
     E definir o estado do subprojeto <estado>
     E marcar a opcao herdar categorias globais
@@ -70,7 +70,7 @@ Funcionalidade: Criação de subprojetos
 
   Esquema do Cenário: Criar um subprojeto com caracter especial no nome
     Quando clicar no projeto desejado "Teste projeto SQL 02"
-    E clicar no botão de cadastrar subProjeto
+    E clicar no botao de cadastrar subProjeto
     E preencher o nome do subprojeto "#$#$%#%&*(!!_>"
     E definir o estado do subprojeto <estado>
     E marcar a opcao herdar categorias globais
@@ -87,7 +87,7 @@ Funcionalidade: Criação de subprojetos
 
   Esquema do Cenário: Criar um subprojeto sem preencher a descrição
     Quando clicar no projeto desejado "Teste projeto SQL 02"
-    E clicar no botão de cadastrar subProjeto
+    E clicar no botao de cadastrar subProjeto
     E preencher o nome do subprojeto "Subprojeto 02"
     E definir o estado do subprojeto <estado>
     E marcar a opcao herdar categorias globais
@@ -104,7 +104,7 @@ Funcionalidade: Criação de subprojetos
 
   Esquema do Cenário: Editar nome do subprojeto com sucesso
     Quando clicar no projeto desejado "Teste projeto SQL 02"
-    E clicar no botão de cadastrar subProjeto
+    E clicar no botao de cadastrar subProjeto
     E preencher o nome do subprojeto "Subprojeto 02"
     E definir o estado do subprojeto <estado>
     E marcar a opcao herdar categorias globais
@@ -125,7 +125,7 @@ Funcionalidade: Criação de subprojetos
 
   Esquema do Cenário: Editar estado do subprojeto com sucesso
     Quando clicar no projeto desejado "Teste projeto SQL 02"
-    E clicar no botão de cadastrar subProjeto
+    E clicar no botao de cadastrar subProjeto
     E preencher o nome do subprojeto "Subprojeto 02"
     E definir o estado do subprojeto <estado>
     E marcar a opcao herdar categorias globais
@@ -146,7 +146,7 @@ Funcionalidade: Criação de subprojetos
 
   Esquema do Cenário: Editar habilitado do subprojeto com sucesso
     Quando clicar no projeto desejado "Teste projeto SQL 02"
-    E clicar no botão de cadastrar subProjeto
+    E clicar no botao de cadastrar subProjeto
     E preencher o nome do subprojeto "Subprojeto 02"
     E definir o estado do subprojeto <estado>
     E marcar a opcao herdar categorias globais
@@ -157,7 +157,7 @@ Funcionalidade: Criação de subprojetos
     E clicar no subprojeto desejado "Subprojeto 02" novamente
     E clicar no campo habilitado
     E clicar no botão de salvar subprojeto
-    Então o sistema deve efetuar a alteração do habilitado com sucesso
+    Então o sistema deve efetuar a alteracao do habilitado com sucesso
 
     Exemplos:
       | estado          |
@@ -167,7 +167,7 @@ Funcionalidade: Criação de subprojetos
 
   Esquema do Cenário: Editar visibilidade do subprojeto com sucesso
     Quando clicar no projeto desejado "Teste projeto SQL 02"
-    E clicar no botão de cadastrar subProjeto
+    E clicar no botao de cadastrar subProjeto
     E preencher o nome do subprojeto "Subprojeto 02"
     E definir o estado do subprojeto <estado>
     E marcar a opcao herdar categorias globais
@@ -178,7 +178,7 @@ Funcionalidade: Criação de subprojetos
     E clicar no subprojeto desejado "Subprojeto 02" novamente
     E  selecionar a visibilidade do projeto novamente
     E clicar no botão de salvar subprojeto
-    Então o sistema deve efetuar a alteração da visiblidade com sucesso
+    Então o sistema deve efetuar a alteracao da visiblidade com sucesso
 
     Exemplos:
       | estado          |
@@ -188,7 +188,7 @@ Funcionalidade: Criação de subprojetos
 
   Esquema do Cenário: Editar descrição do subprojeto com sucesso
     Quando clicar no projeto desejado "Teste projeto SQL 02"
-    E clicar no botão de cadastrar subProjeto
+    E clicar no botao de cadastrar subProjeto
     E preencher o nome do subprojeto "Subprojeto 02"
     E definir o estado do subprojeto <estado>
     E marcar a opcao herdar categorias globais
@@ -199,7 +199,7 @@ Funcionalidade: Criação de subprojetos
     E clicar no subprojeto desejado "Subprojeto 02" novamente
     E preencher a descricao do subprojeto "SubProjeto criado como teste editado" novamente
     E clicar no botão de salvar subprojeto
-    Então o sistema deve efetuar a alteração da descrição com sucesso
+    Então o sistema deve efetuar a alteracao da descricao com sucesso
 
     Exemplos:
       | estado          |
@@ -209,18 +209,18 @@ Funcionalidade: Criação de subprojetos
 
   Cenário: Editar um subprojeto com o nome vazio
     Quando clicar no projeto desejado "Teste projeto SQL 02"
-    E clicar no botão de cadastrar subProjeto
+    E clicar no botao de cadastrar subProjeto
     E preencher o nome do subprojeto "Subprojeto 02"
     E clicar no botão de salvar subprojeto
     E clicar no projeto desejado "Teste projeto SQL 02" novamente
-    E clicar no botão de cadastrar subProjeto
+    E clicar no botao de cadastrar subProjeto
     E preencher o nome do subprojeto ""
     E clicar no botão de salvar subprojeto
     Então o sistema deve permanecer na mesma tela de cadastro
 
   Esquema do Cenário: Excluir subprojeto com sucesso
     Quando clicar no projeto desejado "Teste projeto SQL 02"
-    E clicar no botão de cadastrar subProjeto
+    E clicar no botao de cadastrar subProjeto
     E preencher o nome do subprojeto "Subprojeto 02"
     E definir o estado do subprojeto <estado>
     E marcar a opcao herdar categorias globais
@@ -229,7 +229,7 @@ Funcionalidade: Criação de subprojetos
     E preencher a descricao do subprojeto "SubProjeto criado como teste"
     E clicar no botão de salvar subprojeto
     E clicar no subprojeto desejado "Subprojeto 02" novamente
-    E clicar no botão apagar projeto
+    E clicar no botao apagar projeto
     Então o sistema deve excluir com sucesso
 
     Exemplos:

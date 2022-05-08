@@ -1,9 +1,6 @@
 package steps.usuario;
 
-import io.cucumber.java.pt.Dado;
-import io.cucumber.java.pt.E;
-import io.cucumber.java.pt.Então;
-import io.cucumber.java.pt.Quando;
+import io.cucumber.java.pt.*;
 import org.junit.Assert;
 import pages.LoginPage;
 import pages.UsuarioPage;
@@ -78,7 +75,7 @@ public class UsuarioStep {
         usuarioPage.clicarAdicionarUsuario();
     }
 
-    @Então("o sistema deve efetuar o cadastro com sucesso")
+    @Entao("o sistema deve efetuar o cadastro com sucesso")
     public void oSistemaDeveEfetuarOCadastroComSucesso() throws InterruptedException {
 
 
@@ -93,7 +90,7 @@ public class UsuarioStep {
 
     }
 
-    @Então("o sistema deve emitir uma mensagem de erro")
+    @Entao("o sistema deve emitir uma mensagem de erro")
     public void oSistemaDeveEmitirUmaMensagemDeErro() throws InterruptedException {
 
         Assert.assertEquals("Valida mensagem Erro nome igual", usuarioPage.vericaUsuarioComMesmoNome(), "APPLICATION ERROR #800");
@@ -101,14 +98,14 @@ public class UsuarioStep {
     }
 
 
-    @Então("o sistema deve emitir uma mensagem de erro do usuario sem nome")
+    @Entao("o sistema deve emitir uma mensagem de erro do usuario sem nome")
     public void oSistemaDeveEmitirUmaMensagemDeErroDoUsuarioSemNome() throws InterruptedException {
 
         Assert.assertEquals("Valida mensagem Erro sem nome", usuarioPage.vericaUsuarioSemNome(), "APPLICATION ERROR #805");
 
     }
 
-    @Então("o sistema deve emitir uma mensagem de erro do email igual")
+    @Entao("o sistema deve emitir uma mensagem de erro do email igual")
     public void oSistemaDeveEmitirUmaMensagemDeErroDoEmailIgual() throws InterruptedException {
 
         Assert.assertEquals("Valida mensagem Erro email igual", usuarioPage.vericaUsuarioMesmoEmail(), "APPLICATION ERROR #813");
@@ -116,7 +113,7 @@ public class UsuarioStep {
 
     }
 
-    @Então("o sistema deve emitir uma mensagem de erro do caractere especial")
+    @Entao("o sistema deve emitir uma mensagem de erro do caractere especial")
     public void oSistemaDeveEmitirUmaMensagemDeErroDoCaractereEspecial() throws InterruptedException {
 
         Assert.assertEquals("Valida mensagem Erro sem nome", usuarioPage.vericaCaractereEspecialNome(), "APPLICATION ERROR #805");
@@ -124,7 +121,7 @@ public class UsuarioStep {
     }
 
 
-    @Então("o sistema deve efetuar o cadastro com numero com sucesso")
+    @Entao("o sistema deve efetuar o cadastro com numero com sucesso")
     public void oSistemaDeveEfetuarOCadastroComNumeroComSucesso() throws InterruptedException {
 
         ArrayList<String> list = usuarioPage.validaUsuarioNomeComNumero();
@@ -146,7 +143,7 @@ public class UsuarioStep {
 
     }
 
-    @Então("o sistema deve editar o nome com sucesso")
+    @Entao("o sistema deve editar o nome com sucesso")
     public void oSistemaDeveEditarONomeComSucesso() throws InterruptedException {
 
         ArrayList<String> list = usuarioPage.validaUsuarioNomeEditado();
@@ -174,7 +171,7 @@ public class UsuarioStep {
         usuarioPage.editaNomeVerdadeiroUsuario(nome);
     }
 
-    @Então("o sistema deve editar o nome verdadeiro com sucesso")
+    @Entao("o sistema deve editar o nome verdadeiro com sucesso")
     public void oSistemaDeveEditarONomeVerdadeiroComSucesso() throws InterruptedException {
 
         ArrayList<String> list = usuarioPage.validaUsuarioNomeVerdadeiroEditado();
@@ -188,14 +185,14 @@ public class UsuarioStep {
         usuarioPage.editaEmail(email);
     }
 
-    @Então("o sistema deve editar o email com sucesso")
+    @Entao("o sistema deve editar o email com sucesso")
     public void oSistemaDeveEditarOEmailComSucesso() throws InterruptedException {
 
         ArrayList<String> list = usuarioPage.validaEmail();
         Assert.assertEquals("Valida edição nome verdadeiro com sucesso", list.get(0), "usuarioeditado.igual@hotmail.com");
     }
 
-    @Então("o sistema deve emitir uma mensagem de erro do nome vazio")
+    @Entao("o sistema deve emitir uma mensagem de erro do nome vazio")
     public void oSistemaDeveEmitirUmaMensagemDeErroDoNomeVazio() throws InterruptedException {
 
         Assert.assertEquals("Valida edição nome em branco", usuarioPage.vericaUsuarioComMesmoNome(), "APPLICATION ERROR #800");
@@ -207,7 +204,7 @@ public class UsuarioStep {
         usuarioPage.editaNivel(nivel);
     }
 
-    @Então("o sistema deve editar o nível com sucesso")
+    @Entao("o sistema deve editar o nível com sucesso")
     public void oSistemaDeveEditarONívelComSucesso() throws InterruptedException {
 
         ArrayList<String> list = usuarioPage.validaNivelAcesso();
@@ -221,7 +218,7 @@ public class UsuarioStep {
         usuarioPage.clicarExcluir();
     }
 
-    @Então("o sistema deve excluir com sucesso")
+    @Entao("o sistema deve excluir com sucesso")
     public void oSistemaDeveExcluirComSucesso() throws InterruptedException {
 
         Assert.assertNotEquals("Valida exclusão do usuário", usuarioPage.validaUsuarioExcluido(), "Usuario1");

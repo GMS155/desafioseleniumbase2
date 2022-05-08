@@ -1,10 +1,7 @@
 package steps.login;
 
 
-import io.cucumber.java.pt.Dado;
-import io.cucumber.java.pt.E;
-import io.cucumber.java.pt.Então;
-import io.cucumber.java.pt.Quando;
+import io.cucumber.java.pt.*;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import pages.LoginPage;
@@ -37,7 +34,7 @@ public class LoginStep extends Run {
     }
 
 
-    @Então("o login deve ser realizado com sucesso")
+    @Entao("o login deve ser realizado com sucesso")
     public void oLoginDeveSerRealizadoComSucesso() throws InterruptedException {
 
         String nomeLogin = loginPage.confirmaLoginComSucesso();
@@ -68,7 +65,7 @@ public class LoginStep extends Run {
     }
 
 
-    @Então("a aplicacao deve emitir uma mensagem de erro")
+    @Entao("a aplicacao deve emitir uma mensagem de erro")
     public void aAplicacaoDeveEmitirUmaMensagemDeErro() {
 
         Assert.assertEquals(retornoMensagemErro, loginPage.mensagemErroLogin());
@@ -81,7 +78,7 @@ public class LoginStep extends Run {
     }
 
 
-    @Então("a aplicacao deve permanecer na tela de login")
+    @Entao("a aplicacao deve permanecer na tela de login")
     public void aAplicacaoDevePermanecerNaTelaDeLogin() {
         Boolean TestVisible = getDriver().findElement(By.id("tl_login_button")).isDisplayed();
         Assert.assertTrue(TestVisible);

@@ -5,107 +5,107 @@ Funcionalidade: Criação de usuários
   Para criar um novo usuário
 
   Contexto:
-    Dado que o usuário esteja na página de login do Mantis
-    E que o usuário tenha feito o login com sucesso
+    Dado que o usuario esteja na pagina de login do Mantis
+    E que o usuario tenha feito o login com sucesso
 
 
   Cenário: Criar um usuário com sucesso
-    Quando acessar a tela de criação de usuário
-    E preencher o nome de usuário "GMS"
-    E preencher o nome verdadeiro do usuário "Teste Nome Usuário"
+    Quando acessar a tela de criacao de usuario
+    E preencher o nome de usuario "GMS"
+    E preencher o nome verdadeiro do usuario "Teste Nome Usuário"
     E preencher o email "Usuario@hotmail.com"
-    E preencher o nível de acesso
-    E selecionar a opção protegido
-    E clicar no botão de criar usuário
+    E preencher o nivel de acesso
+    E selecionar a opcao protegido
+    E clicar no botao de criar usuario
     Então o sistema deve efetuar o cadastro com sucesso
 
   Cenário: Criar um usuário com número no campo nome de usuário
-    Quando acessar a tela de criação de usuário
-    E preencher o nome de usuário "123456789"
-    E preencher o nome verdadeiro do usuário "Teste Nome Usuário"
+    Quando acessar a tela de criacao de usuario
+    E preencher o nome de usuario "123456789"
+    E preencher o nome verdadeiro do usuario "Teste Nome Usuário"
     E preencher o email "Usuario2@hotmail.com"
-    E preencher o nível de acesso
-    E selecionar a opção protegido
-    E clicar no botão de criar usuário
-    Então o sistema deve efetuar o cadastro com número com sucesso
+    E preencher o nivel de acesso
+    E selecionar a opcao protegido
+    E clicar no botao de criar usuario
+    Então o sistema deve efetuar o cadastro com numero com sucesso
 
   Cenário: Criar um usuário com caractere especial no campo nome de usuário
-    Quando acessar a tela de criação de usuário
-    E preencher o nome de usuário "&#&#&@&*!_->"
-    E preencher o nome verdadeiro do usuário "Teste Nome Usuário"
+    Quando acessar a tela de criacao de usuario
+    E preencher o nome de usuario "&#&#&@&*!_->"
+    E preencher o nome verdadeiro do usuario "Teste Nome Usuário"
     E preencher o email "Usuario2@hotmail.com"
-    E preencher o nível de acesso
-    E selecionar a opção protegido
-    E clicar no botão de criar usuário
+    E preencher o nivel de acesso
+    E selecionar a opcao protegido
+    E clicar no botao de criar usuario
     Então o sistema deve emitir uma mensagem de erro do caractere especial
 
   Cenário: Criar um usuário sem nome
-    Quando acessar a tela de criação de usuário
-    E preencher o nome de usuário ""
-    E preencher o nome verdadeiro do usuário "Usuario Completo"
+    Quando acessar a tela de criacao de usuário
+    E preencher o nome de usuario ""
+    E preencher o nome verdadeiro do usuario "Usuario Completo"
     E preencher o email "usuario.igual@hotmail.com"
-    E clicar no botão de criar usuário
-    Então o sistema deve emitir uma mensagem de erro do usuário sem nome
+    E clicar no botao de criar usuario
+    Então o sistema deve emitir uma mensagem de erro do usuario sem nome
 
   Cenário: Criar um usuário com nome igual ao usuário que foi inserido pelo sql
-    Quando acessar a tela de criação de usuário
-    E preencher o nome de usuário "Usuario1"
-    E preencher o nome verdadeiro do usuário "Usuario Completo"
+    Quando acessar a tela de criacao de usuario
+    E preencher o nome de usuario "Usuario1"
+    E preencher o nome verdadeiro do usuario "Usuario Completo"
     E preencher o email "usuario.igual@hotmail.com"
-    E clicar no botão de criar usuário
+    E clicar no botao de criar usuario
     Então o sistema deve emitir uma mensagem de erro
 
   Cenário: Criar um usuário com o mesmo email do usuário que foi inserido pelo sql
-    Quando acessar a tela de criação de usuário
-    E preencher o nome de usuário "Nome Diferente"
-    E preencher o nome verdadeiro do usuário "Usuario Diferente"
+    Quando acessar a tela de criacao de usuario
+    E preencher o nome de usuario "Nome Diferente"
+    E preencher o nome verdadeiro do usuario "Usuario Diferente"
     E preencher o email "usuario.igual@hotmail.com"
-    E clicar no botão de criar usuário
+    E clicar no botao de criar usuario
     Então o sistema deve emitir uma mensagem de erro do email igual
 
     #--------------------------- editar nome -------------------
 
 
   Cenário: Editar campo nome usuário com sucesso
-    Quando acessar a tela dos usuários cadastrados
-    E clicar no campo usuário "Usuario1"
-    E editar o nome de usuário "Usuario1Editado"
-    E clicar no botão de atualizar usuário
+    Quando acessar a tela dos usuarios cadastrados
+    E clicar no campo usuario "Usuario1"
+    E editar o nome de usuario "Usuario1Editado"
+    E clicar no botao de atualizar usuario
     Então o sistema deve editar o nome com sucesso
 
   Cenário: Editar campo nome usuário para vazio
-    Quando acessar a tela dos usuários cadastrados
-    E clicar no campo usuário "Usuario1"
-    E editar o nome de usuário ""
-    E clicar no botão de atualizar usuário
+    Quando acessar a tela dos usuarios cadastrados
+    E clicar no campo usuario "Usuario1"
+    E editar o nome de usuario ""
+    E clicar no botao de atualizar usuario
     Então o sistema deve emitir uma mensagem de erro do nome vazio
 
   Cenário: Editar campo nome verdadeiro com sucesso
-    Quando acessar a tela dos usuários cadastrados
-    E clicar no campo usuário "Usuario1"
+    Quando acessar a tela dos usuarios cadastrados
+    E clicar no campo usuario "Usuario1"
     E editar o nome verdadeiro "Usuario Completo editado"
-    E clicar no botão de atualizar usuário
+    E clicar no botao de atualizar usuario
     Então o sistema deve editar o nome verdadeiro com sucesso
 
   Cenário: Editar email com sucesso
-    Quando acessar a tela dos usuários cadastrados
-    E clicar no campo usuário "Usuario1"
+    Quando acessar a tela dos usuarios cadastrados
+    E clicar no campo usuario "Usuario1"
     E editar o email "usuarioeditado.igual@hotmail.com"
-    E clicar no botão de atualizar usuário
+    E clicar no botao de atualizar usuario
     Então o sistema deve editar o email com sucesso
 
   Cenário: Editar nível de acesso com sucesso
-    Quando acessar a tela dos usuários cadastrados
-    E clicar no campo usuário "Usuario1"
-    E editar o nível de acesso "desenvolvedor"
-    E clicar no botão de atualizar usuário
+    Quando acessar a tela dos usuarios cadastrados
+    E clicar no campo usuario "Usuario1"
+    E editar o nivel de acesso "desenvolvedor"
+    E clicar no botao de atualizar usuario
     Então o sistema deve editar o nível com sucesso
 
      #--------------------------- excluir usuário -------------------
 
   @SoEsse
   Cenário: Excluir usuário com sucesso
-    Quando acessar a tela dos usuários cadastrados
-    E clicar no campo usuário "Usuario1"
-    E clicar no botão apagar usuário
+    Quando acessar a tela dos usuarios cadastrados
+    E clicar no campo usuario "Usuario1"
+    E clicar no botao apagar usuario
     Então o sistema deve excluir com sucesso
