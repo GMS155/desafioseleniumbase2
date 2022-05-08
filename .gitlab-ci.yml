@@ -1,12 +1,41 @@
-stages:
+#stages:
+ # - test
+
+#test:
+ # stage: test
+  #tags:
+   # - ci
+ # script:
+  #  - echo "Teste Automatico"
+   # - powershell mvn clean
+    #- powershell mvn test
+
+test2:
+  image: maven:latest
+
+  services:
+    - name: mariadb
+
+  variables:
+  #Configure mysql service (https://hub.docker.com/_/mysql/)
+  MYSQL_ROOT_PASSWORD: root
+  MYSQL_DATABASE: bugtracker
+  MYSQL_USER: mantisbt
+  MYSQL_PASSWORD: mantisbt
+
+connect:
+  image: mariadb
+
+  script:
+    - echo "SELECT 'OK';"
+  tags:
+    - docker
+stages2:
   - test
 
-test:
+test3:
   stage: test
+  script:
+    - mvn test
   tags:
     - ci
-  script:
-    - echo "Teste Automatico"
-    - powershell mvn clean
-    - powershell mvn test
-
