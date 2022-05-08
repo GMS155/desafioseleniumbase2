@@ -1,24 +1,30 @@
+stages:
+  - test
+
+image: maven:latest
+
+services:
+  - name: mariadb
+
+variables:
+  #Configure mysql service (https://hub.docker.com/_/mysql/)
+  MYSQL_ROOT_PASSWORD: root
+  MYSQL_DATABASE: bugtracker
+  MYSQL_USER: mantisbt
+  MYSQL_PASSWORD: mantisbt
+
 connect:
   image: mariadb
+
   script:
-    - "echo \"SELECT 'OK';\""
+    - echo "SELECT 'OK';"
   tags:
     - docker
-stages2:
-  - test
-test2:
-  MYSQL_DATABASE: bugtracker
-  MYSQL_PASSWORD: mantisbt
-  MYSQL_ROOT_PASSWORD: root
-  MYSQL_USER: mantisbt
-  image: "maven:latest"
-  services:
-    -
-      name: mariadb
-  variables: ~
-test3:
-  script:
-    - "mvn test"
+
+
+test:
   stage: test
+  script:
+    - mvn test
   tags:
     - ci
