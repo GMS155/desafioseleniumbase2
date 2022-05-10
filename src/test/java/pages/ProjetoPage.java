@@ -27,7 +27,7 @@ public class ProjetoPage extends ProjetoRun {
     private By visibilidadeProjeto = By.id("project-view-state");
     private By descricaoProjeto = By.id("project-description");
     private By validarProjetoCadastrado = By.xpath("//td/a[text()='Projeto01']");
-    private By validarProjetoComCaracterEspecial = By.xpath("//td/a[text()='*&!##@@&^-']");
+    private By validarProjetoComCaracterEspecial = By.xpath("//td/a[text()='*&!##@@=']");
     private By validarProjetoComNumero = By.xpath("//td/a[text()='8989448489846546']");
     private By validarProjetoExcluido = By.xpath("//td/a[text()='Teste projeto SQL 06']");
     private By validarProjetoNomeEditado = By.xpath("//td/a[text()='» Subprojeto 02 editado']");
@@ -166,7 +166,7 @@ public class ProjetoPage extends ProjetoRun {
         Utils.esperarElementoVisivel(validarProjetoCadastrado,Duration.ofSeconds(20));
         String sucesso = String.valueOf(getDriver().findElement(validarProjetoCadastrado).getText());
         list.add(sucesso);
-        String estado = String.valueOf(getDriver().findElement(By.xpath("//tr/td[text()='estável']")).getText());
+        String estado = String.valueOf(getDriver().findElement(By.xpath("(//tr/td[text()='estável'])[1]")).getText());
         list.add(estado);
         String habilitado = String.valueOf(getDriver().findElement(habilitadoEditado).getText());
         list.add(habilitado);

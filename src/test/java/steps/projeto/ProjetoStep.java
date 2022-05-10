@@ -125,14 +125,14 @@ public class ProjetoStep extends ProjetoRun {
     @E("preencher o nome do projeto com caractere especial")
     public void preencherONomeDoProjetoComCaractereEspecial() throws InterruptedException {
 
-        projetoPage.preencherNomeProjeto("*&!##@@&^-");
+        projetoPage.preencherNomeProjeto("*&!##@@=");
     }
 
     @Entao("o sistema deve efetuar o cadastro do caractere especial com sucesso")
     public void oSistemaDeveEfetuarOCadastroDoCaractereEspecialComSucesso() throws InterruptedException {
 
         ArrayList<String> list = projetoPage.validaProjetoCriadoComCaractereEspecial();
-        Assert.assertEquals("Valida cadastro com caractere especial com sucesso", list.get(0), "*&!##@@&^-");
+        Assert.assertEquals("Valida cadastro com caractere especial com sucesso", list.get(0), "*&!##@@=");
 
     }
 

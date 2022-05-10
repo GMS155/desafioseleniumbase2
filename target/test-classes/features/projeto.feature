@@ -13,7 +13,7 @@ Funcionalidade: Criação de projetos
     Quando acessar a tela de criacao de projeto
     E clicar no botao de salvar projeto
     Então o sistema deve permanecer na mesma tela de cadastro
-@SoEsse
+
   Cenário: Criar um projeto com sucesso
     Quando acessar a tela de criacao de projeto
     E preencher o nome do projeto
@@ -34,7 +34,7 @@ Funcionalidade: Criação de projetos
     E preencher a descricao do projeto "Projeto criado como teste"
     E clicar no botao de salvar projeto
     Então o sistema deve emitir uma mensagem de erro
-
+@SoEsse
   Cenário: Criar projeto com caractere especial no campo nome
     Quando acessar a tela de criacao de projeto
     E preencher o nome do projeto com caractere especial
