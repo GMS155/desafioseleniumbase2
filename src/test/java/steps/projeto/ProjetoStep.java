@@ -98,7 +98,7 @@ public class ProjetoStep extends ProjetoRun {
     @Entao("o sistema deve efetuar o cadastro editado com sucesso")
     public void oSistemaDeveEfetuarOCadastroEditadoComSucesso() throws InterruptedException {
 
-        Assert.assertEquals("Valida cadastro projeto com sucesso", projetoPage.validaProjetoNomeEditado(), "Teste projeto SQL 01_Editao");
+        Assert.assertEquals("Valida cadastro projeto com sucesso", projetoPage.validaProjetoNomeEditado(), "Teste projeto SQL 01_Editado");
     }
 
     @E("que tenha cadastrado um projeto")

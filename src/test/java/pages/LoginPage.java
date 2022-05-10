@@ -23,7 +23,7 @@ public class LoginPage extends Run {
     public void acessarAplicacao() throws InterruptedException {
         new GlobalParameters();
         getDriver(GlobalParameters.BROWSER_DEFAULT);
-        getDriver().get("http://localhost/mantisbt/login_page.php");
+        getDriver().get("http://localhost:8080/mantisbt/login_page.php");
     }
 
     public void preendheUsuario(String usuario) {

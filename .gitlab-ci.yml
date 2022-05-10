@@ -1,24 +1,13 @@
-connect:
-  image: mariadb
-  script:
-    - "echo \"SELECT 'OK';\""
-  tags:
-    - docker
-stages2:
+stages:
   - test
-test2:
-  MYSQL_DATABASE: bugtracker
-  MYSQL_PASSWORD: mantisbt
-  MYSQL_ROOT_PASSWORD: root
-  MYSQL_USER: mantisbt
-  image: "maven:latest"
-  services:
-    -
-      name: mariadb
-  variables: ~
-test3:
-  script:
-    - "mvn test"
+
+test:
   stage: test
   tags:
     - ci
+  script:
+    - echo "Teste Automatico"
+    - mvn -Dtest=ProjetoRun test
+   # - powershell mvn clean
+  #- powershell mvn test
+
