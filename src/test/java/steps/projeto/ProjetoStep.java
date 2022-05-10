@@ -67,7 +67,7 @@ public class ProjetoStep extends ProjetoRun {
 
     @E("preencher o estado do projeto")
     public void preencherOEstadoDoProjeto() throws InterruptedException {
-        projetoPage.selecionaEstado("estável");
+        projetoPage.selecionaEstado("obsoleto");
     }
 
     @E("marcar a opcao herdar categorias globais")
@@ -87,7 +87,7 @@ public class ProjetoStep extends ProjetoRun {
         ArrayList<String> list = projetoPage.validaProjetoCriado();
 
         Assert.assertEquals("Valida cadastro nome projeto com sucesso", list.get(0), "Projeto01");
-        Assert.assertEquals("Valida cadastro estado projeto com sucesso", list.get(1), "estável");
+        Assert.assertEquals("Valida cadastro estado projeto com sucesso", list.get(1), "obsoleto");
         Assert.assertEquals("Valida cadastro habilitado projeto com sucesso", list.get(2), "");
         Assert.assertEquals("Valida cadastro visibilidade projeto com sucesso", list.get(3), "público");
         Assert.assertEquals("Valida cadastro descricao com sucesso", list.get(4), "Projeto criado como teste");

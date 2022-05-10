@@ -166,7 +166,7 @@ public class ProjetoPage extends ProjetoRun {
         Utils.esperarElementoVisivel(validarProjetoCadastrado,Duration.ofSeconds(20));
         String sucesso = String.valueOf(getDriver().findElement(validarProjetoCadastrado).getText());
         list.add(sucesso);
-        String estado = String.valueOf(getDriver().findElement(By.xpath("(//tr/td[text()='estável'])[1]")).getText());
+        String estado = String.valueOf(getDriver().findElement(By.xpath("//tr/td[text()='obsoleto']")).getText());
         list.add(estado);
         String habilitado = String.valueOf(getDriver().findElement(habilitadoEditado).getText());
         list.add(habilitado);
