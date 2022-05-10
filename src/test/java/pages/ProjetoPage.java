@@ -170,7 +170,7 @@ public class ProjetoPage extends ProjetoRun {
         list.add(estado);
         String habilitado = String.valueOf(getDriver().findElement(habilitadoEditado).getText());
         list.add(habilitado);
-        String visibilidade = String.valueOf(getDriver().findElement(By.xpath("//tr/td[text()='público']")).getText());
+        String visibilidade = String.valueOf(getDriver().findElement(By.xpath("//tr/td[text()='privado']")).getText());
         list.add(visibilidade);
         String descricao = String.valueOf(getDriver().findElement(By.xpath("//tr/td[text()='Projeto criado como teste']")).getText());
         list.add(descricao);

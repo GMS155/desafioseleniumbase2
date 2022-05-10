@@ -78,7 +78,7 @@ public class ProjetoStep extends ProjetoRun {
 
     @E("selecionar a visibilidade do projeto")
     public void selecionarAVisibilidadeDoProjeto() throws InterruptedException {
-        projetoPage.selecionaVisibilidade("público");
+        projetoPage.selecionaVisibilidade("privado");
     }
 
 
@@ -89,7 +89,7 @@ public class ProjetoStep extends ProjetoRun {
         Assert.assertEquals("Valida cadastro nome projeto com sucesso", list.get(0), "Projeto01");
         Assert.assertEquals("Valida cadastro estado projeto com sucesso", list.get(1), "obsoleto");
         Assert.assertEquals("Valida cadastro habilitado projeto com sucesso", list.get(2), "");
-        Assert.assertEquals("Valida cadastro visibilidade projeto com sucesso", list.get(3), "público");
+        Assert.assertEquals("Valida cadastro visibilidade projeto com sucesso", list.get(3), "privado");
         Assert.assertEquals("Valida cadastro descricao com sucesso", list.get(4), "Projeto criado como teste");
 
 
