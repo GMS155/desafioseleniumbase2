@@ -32,6 +32,7 @@ public class LoginPage extends Run {
         getDriver().findElement(campoUsuario).sendKeys(usuario);
         //jse.executeScript("document.querySelector(\"#tl_login\").innerHTML = 'gui'");
 
+
     }
 
     public void clicarBotaoEntrar() throws InterruptedException {

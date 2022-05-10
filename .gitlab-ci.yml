@@ -8,6 +8,5 @@ test:
   script:
     - echo "Teste Automatico"
     - mvn -Dtest=ProjetoRun test
-   # - powershell mvn clean
-  #- powershell mvn test
+
 
