@@ -24,12 +24,10 @@ public class PerfilStep {
     @Dado("que o usuario tenha feito o login com sucesso")
     public void queOUsuarioTenhaFeitoOLoginComSucesso() throws InterruptedException {
 
-
         loginPage.preendheUsuario("administrator");
         loginPage.clicarBotaoEntrar();
         loginPage.preencheSenha("root");
         loginPage.clicarBotaoEntrar();
-
     }
 
     @Quando("acessar a tela de gerenciar perfil")
@@ -37,7 +35,6 @@ public class PerfilStep {
 
         perfilPage.clicarBotaoGerenciar();
         perfilPage.clicarBotaoGerenciarProjetos();
-
     }
 
     @E("preencher a plataforma corretamente")
@@ -52,13 +49,11 @@ public class PerfilStep {
         perfilPage.preencherSO("Windows");
     }
 
-
     @E("preencher a versao do SO corretamente")
     public void preencherAVersaoDoSOCorretamente() throws InterruptedException {
 
         perfilPage.preencherVersao("2.14.1");
     }
-
 
     @E("preencher a descricao do sistema corretamente")
     public void preencherADescricaoDoSistemaCorretamente() throws InterruptedException {
@@ -74,14 +69,12 @@ public class PerfilStep {
 
     @Entao("o sistema deve cadastrar o perfil com sucesso")
     public void oSistemaDeveCadastrarOPerfilComSucesso() {
-        ArrayList<String> list = perfilPage.valisdaPerfilCriado();
 
+        ArrayList<String> list = perfilPage.validaPerfilCriado();
         Assert.assertEquals("Valida plataforma cadastrado com sucesso", list.get(0), "teste");
         Assert.assertEquals("Valida so cadastrado com sucesso", list.get(1), "Windows");
         Assert.assertEquals("Valida versão cadastrado com sucesso", list.get(2), "2.14.1");
-
     }
-
 
     @Entao("o sistema deve permanecer na mesma tela de cadastro")
     public void oSistemaDevePermanecerNaMesmaTelaDeCadastro() throws InterruptedException {
@@ -116,10 +109,6 @@ public class PerfilStep {
     @Entao("o sistema deve excluir o perfil desejado corretamente")
     public void oSistemaDeveExcluirOPerfilDesejadoCorretamente() throws InterruptedException {
 
-
-        Assert.assertNotEquals("Valida exclusão perfil com sucesso",perfilPage.validaPerfilExcluido(), "Insert SQL");
-
+        Assert.assertNotEquals("Valida exclusão perfil com sucesso", perfilPage.validaPerfilExcluido(), "Insert SQL");
     }
-
-
 }

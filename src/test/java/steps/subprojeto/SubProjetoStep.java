@@ -17,12 +17,10 @@ public class SubProjetoStep extends SubprojetoRun {
     @Dado("que o usuario tenha feito o login com sucesso")
     public void queOUsuarioTenhaFeitoOLoginComSucesso() throws InterruptedException {
 
-
         loginPage.preendheUsuario("administrator");
         loginPage.clicarBotaoEntrar();
         loginPage.preencheSenha("root");
         loginPage.clicarBotaoEntrar();
-
     }
 
     @Quando("acessar o projeto desejado")
@@ -37,7 +35,6 @@ public class SubProjetoStep extends SubprojetoRun {
     public void clicarNoBotaoDeCadastrarSubProjeto() throws InterruptedException {
 
         subprojeto.clicarSubProjeto();
-
     }
 
     @E("preencher o nome do subprojeto {string}")
@@ -66,6 +63,7 @@ public class SubProjetoStep extends SubprojetoRun {
 
     @E("selecionar a visibilidade do projeto")
     public void selecionarAVisibilidadeDoProjeto() throws InterruptedException {
+
         subprojeto.selecionaVisibilidade("público");
     }
 
@@ -73,22 +71,18 @@ public class SubProjetoStep extends SubprojetoRun {
     public void preencherADescricaoDoSubprojeto(String descricao) throws InterruptedException {
 
         subprojeto.prencherDescricao(descricao);
-
     }
 
     @E("clicar no botão de salvar subprojeto")
     public void clicarNoBotãoDeSalvarSubprojeto() throws InterruptedException {
 
         subprojeto.clicarBotaoConfirmaSubProjeto();
-
     }
 
     @Entao("o sistema deve efetuar o cadastro do subprojeto com sucesso")
     public void oSistemaDeveEfetuarOCadastroDoSubprojetoComSucesso() throws InterruptedException {
 
         Assert.assertEquals("Valida cadastro subprojeto com sucesso", subprojeto.validaSubProjetoCriado(), "» Subprojeto 02");
-
-
     }
 
     @Entao("o sistema deve efetuar o cadastro do subprojeto editado com sucesso")
@@ -115,7 +109,6 @@ public class SubProjetoStep extends SubprojetoRun {
     public void oSistemaDeveEmitirUmaMensagemDeErro() throws InterruptedException {
 
         Assert.assertEquals("Valida mensagem Erro nome igual", projetoPage.vericaProjetoComMesmoNome(), "APPLICATION ERROR #701");
-
     }
 
     @Entao("o sistema deve permanecer na mesma tela de cadastro")
@@ -126,27 +119,24 @@ public class SubProjetoStep extends SubprojetoRun {
 
     @Entao("o sistema deve efetuar o cadastro do subprojeto com número com sucesso")
     public void oSistemaDeveEfetuarOCadastroDoSubprojetoComNúmeroComSucesso() throws InterruptedException {
+
         Assert.assertEquals("Valida cadastro subprojeto com sucesso", subprojeto.validaSubProjetoCriadoComNumero(), "» 123456789");
-
-
     }
 
     @Entao("o sistema deve efetuar o cadastro do subprojeto com caracter especial com sucesso")
     public void oSistemaDeveEfetuarOCadastroDoSubprojetoComCaracterEspecialComSucesso() throws InterruptedException {
-        Assert.assertEquals("Valida cadastro subprojeto com sucesso", subprojeto.validaSubProjetoCriadoComCaracterEspecial(), "» #$#$%#%&*(!!_>");
 
+        Assert.assertEquals("Valida cadastro subprojeto com sucesso", subprojeto.validaSubProjetoCriadoComCaracterEspecial(), "» #$#$%#%&*(!!_>");
     }
 
     @E("clicar no subprojeto desejado {string} novamente")
     public void clicarNoSubprojetoDesejadoNovamente(String subprojeto) throws InterruptedException {
 
         projetoPage.clicarSubProjetoNovamente(subprojeto);
-
     }
 
     @Entao("o sistema deve realizar o cadastro do subprojeto com estado editado com sucesso")
     public void oSistemaDeveRealizarOCadastroDoSubprojetoComEstadoEditadoComSucesso() {
-
 
     }
 
@@ -154,11 +144,11 @@ public class SubProjetoStep extends SubprojetoRun {
     public void oSistemaDeveRealizarOCadastroDoSubprojetoComEstadoEditadoComSucesso(String estado) throws InterruptedException {
 
         Assert.assertEquals("Valida edição estado com sucesso", projetoPage.validaEstadoEditado(estado), estado);
-
     }
 
     @E("clicar no campo habilitado")
     public void clicarNoCampoHabilitado() throws InterruptedException {
+
         projetoPage.clicarhabilitado();
     }
 
@@ -166,20 +156,18 @@ public class SubProjetoStep extends SubprojetoRun {
     public void oSistemaDeveEfetuarAAlteracaoDoHabilitadoComSucesso() throws InterruptedException {
 
         Assert.assertNotEquals("Valida alteração habilitado com sucesso", projetoPage.validaProjetoHabilitadoEditadoDesmarcado(), "");
-
     }
 
     @E("selecionar a visibilidade do projeto novamente")
     public void selecionarAVisibilidadeDoProjetoNovamente() throws InterruptedException {
-        subprojeto.selecionaVisibilidade("privado");
 
+        subprojeto.selecionaVisibilidade("privado");
     }
 
     @Entao("o sistema deve efetuar a alteracao da visiblidade com sucesso")
     public void oSistemaDeveEfetuarAAlteracaoDaVisiblidadeComSucesso() throws InterruptedException {
 
         Assert.assertEquals("Valida alteração visibilidade com sucesso", projetoPage.validaProjetoVisibilidadeEditado(), "privado");
-
     }
 
     @E("preencher a descricao do subprojeto {string} novamente")
@@ -192,11 +180,11 @@ public class SubProjetoStep extends SubprojetoRun {
     public void oSistemaDeveEfetuarAAlteracaoDaDescricaoComSucesso() throws InterruptedException {
 
         Assert.assertEquals("Valida alteração descrição com sucesso", subprojeto.validaSubProjetoDescricaoEditado(), "SubProjeto criado como teste editado");
-
     }
 
     @E("clicar no botao apagar projeto")
     public void clicarNoBotaoApagarProjeto() throws InterruptedException {
+
         subprojeto.clicarExcluir();
         subprojeto.clicarExcluir();
     }
@@ -204,27 +192,6 @@ public class SubProjetoStep extends SubprojetoRun {
     @Entao("o sistema deve excluir com sucesso")
     public void oSistemaDeveExcluirComSucesso() throws InterruptedException {
 
-        Assert.assertNotEquals("Valida exclusão com sucesso",subprojeto.validaSubProjetoExcluido(), "Subprojeto 02");
-
+        Assert.assertNotEquals("Valida exclusão com sucesso", subprojeto.validaSubProjetoExcluido(), "Subprojeto 02");
     }
-/*
-    @E("que tenha um projeto cadastrado")
-    public void queTenhaUmProjetoCadastrado() throws InterruptedException {
-
-        projetoPage.clicarBotaoGerenciar();
-        projetoPage.clicarBotaoGerenciarProjetos();
-        projetoPage.clicarBotaoCriarNovoProjeto();
-        projetoPage.preencherNomeProjeto("Projeto01");
-        projetoPage.selecionaEstado("estável");
-        projetoPage.clicarHerdarCategorias();
-        projetoPage.selecionaVisibilidade("público");
-        projetoPage.prencherDescricao("Projeto criado como teste");
-        projetoPage.clicarBotaoAdicionarProjeto();
-
-
-    }
-
- */
-
-
 }

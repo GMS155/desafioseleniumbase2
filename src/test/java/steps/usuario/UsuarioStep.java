@@ -37,7 +37,6 @@ public class UsuarioStep {
         usuarioPage.clicarBotaoCriarNovoUsuario();
     }
 
-
     @E("preencher o nome de usuario {string}")
     public void preencherONomeDeUsuario(String nome) throws InterruptedException {
 
@@ -55,7 +54,6 @@ public class UsuarioStep {
 
         usuarioPage.preencherEmail(email);
     }
-
 
     @E("preencher o nivel de acesso")
     public void preencherONivelDeAcesso() throws InterruptedException {
@@ -78,55 +76,43 @@ public class UsuarioStep {
     @Entao("o sistema deve efetuar o cadastro com sucesso")
     public void oSistemaDeveEfetuarOCadastroComSucesso() throws InterruptedException {
 
-
         ArrayList<String> list = usuarioPage.validaUsuarioCriado();
-
         Assert.assertEquals("Valida cadastro nome usuário com sucesso", list.get(0), "GMS");
         Assert.assertEquals("Valida cadastro nome verdadeiro usuário com sucesso", list.get(1), "Teste Nome Usuário");
         Assert.assertEquals("Valida cadastro email usuário com sucesso", list.get(2), "Usuario@hotmail.com");
         Assert.assertEquals("Valida cadastro nível de acesso com sucesso", list.get(3), "visualizador");
         Assert.assertEquals("Valida cadastro protegido com sucesso", list.get(4), " ");
-
-
     }
 
     @Entao("o sistema deve emitir uma mensagem de erro")
     public void oSistemaDeveEmitirUmaMensagemDeErro() throws InterruptedException {
 
         Assert.assertEquals("Valida mensagem Erro nome igual", usuarioPage.vericaUsuarioComMesmoNome(), "APPLICATION ERROR #800");
-
     }
-
 
     @Entao("o sistema deve emitir uma mensagem de erro do usuario sem nome")
     public void oSistemaDeveEmitirUmaMensagemDeErroDoUsuarioSemNome() throws InterruptedException {
 
         Assert.assertEquals("Valida mensagem Erro sem nome", usuarioPage.vericaUsuarioSemNome(), "APPLICATION ERROR #805");
-
     }
 
     @Entao("o sistema deve emitir uma mensagem de erro do email igual")
     public void oSistemaDeveEmitirUmaMensagemDeErroDoEmailIgual() throws InterruptedException {
 
         Assert.assertEquals("Valida mensagem Erro email igual", usuarioPage.vericaUsuarioMesmoEmail(), "APPLICATION ERROR #813");
-
-
     }
 
     @Entao("o sistema deve emitir uma mensagem de erro do caractere especial")
     public void oSistemaDeveEmitirUmaMensagemDeErroDoCaractereEspecial() throws InterruptedException {
 
         Assert.assertEquals("Valida mensagem Erro sem nome", usuarioPage.vericaCaractereEspecialNome(), "APPLICATION ERROR #805");
-
     }
-
 
     @Entao("o sistema deve efetuar o cadastro com numero com sucesso")
     public void oSistemaDeveEfetuarOCadastroComNumeroComSucesso() throws InterruptedException {
 
         ArrayList<String> list = usuarioPage.validaUsuarioNomeComNumero();
         Assert.assertEquals("Valida cadastro com caractere especial com sucesso", list.get(0), "123456789");
-
     }
 
     @E("clicar no campo usuario {string}")
@@ -139,8 +125,6 @@ public class UsuarioStep {
     public void clicarNoBotaoDeAtualizarUsuario() throws InterruptedException {
 
         usuarioPage.clicarAdicionarUsuario();
-
-
     }
 
     @Entao("o sistema deve editar o nome com sucesso")
@@ -148,8 +132,6 @@ public class UsuarioStep {
 
         ArrayList<String> list = usuarioPage.validaUsuarioNomeEditado();
         Assert.assertEquals("Valida edição nome com sucesso", list.get(0), "Usuario1Editado");
-
-
     }
 
     @Quando("acessar a tela dos usuarios cadastrados")
@@ -176,7 +158,6 @@ public class UsuarioStep {
 
         ArrayList<String> list = usuarioPage.validaUsuarioNomeVerdadeiroEditado();
         Assert.assertEquals("Valida edição nome verdadeiro com sucesso", list.get(0), "Usuario Completo editado");
-
     }
 
     @E("editar o email {string}")
@@ -209,7 +190,6 @@ public class UsuarioStep {
 
         ArrayList<String> list = usuarioPage.validaNivelAcesso();
         Assert.assertEquals("Valida edição nível com sucesso", list.get(0), "desenvolvedor");
-
     }
 
     @E("clicar no botao apagar usuario")

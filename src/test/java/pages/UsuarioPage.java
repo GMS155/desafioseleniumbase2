@@ -36,6 +36,7 @@ public class UsuarioPage extends UsuarioRun {
     private By confirmaExcluirUsuario = By.xpath("//input[@class='btn btn-primary btn-white btn-round']");
     private By validarUsuarioExcluido = By.xpath("//td/a[text()='Usuario1']");
 
+
     public void clicarBotaoGerenciar() throws InterruptedException {
 
         getDriver().findElement(menuGerenciar).click();
@@ -52,30 +53,6 @@ public class UsuarioPage extends UsuarioRun {
         getDriver().findElement(botaoNovoUsuario).click();
     }
 
-    public void preencherNomeUsuario(String nome) throws InterruptedException {
-
-        getDriver().findElement(nomeUsuario).sendKeys(nome);
-
-    }
-
-    public void preencherNomeUsuarioVerdadeiro(String nomeVerdadeiro) throws InterruptedException {
-
-        getDriver().findElement(nomeUsuarioVerdadeiro).sendKeys(nomeVerdadeiro);
-
-    }
-
-    public void preencherEmail(String email) throws InterruptedException {
-
-        getDriver().findElement(this.email).sendKeys(email);
-
-    }
-
-    public void preencherNivelAcesso(String acesso) throws InterruptedException {
-
-        getDriver().findElement(nivelAcesso).sendKeys(acesso);
-
-    }
-
     public void clicarProtegido() {
 
         getDriver().findElement(protegido).click();
@@ -83,20 +60,47 @@ public class UsuarioPage extends UsuarioRun {
 
     public void clicarAdicionarUsuario() throws InterruptedException {
 
-        getDriver().findElement(By.xpath("(//span[@class='lbl'])[3]")).click();
+        //getDriver().findElement(By.xpath("(//span[@class='lbl'])[3]")).click();
         getDriver().findElement(botaoAdicionarUsuario).click();
+    }
 
+    public void clicarUsuario(String usuario) throws InterruptedException {
+
+        getDriver().findElement(By.linkText(usuario)).click();
+    }
+
+    public void clicarExcluir() throws InterruptedException {
+
+        getDriver().findElement(botaoExcluirUsuario).click();
+        getDriver().findElement(confirmaExcluirUsuario).click();
+    }
+
+    public void preencherNomeUsuario(String nome) throws InterruptedException {
+
+        getDriver().findElement(nomeUsuario).sendKeys(nome);
+    }
+
+    public void preencherNomeUsuarioVerdadeiro(String nomeVerdadeiro) throws InterruptedException {
+
+        getDriver().findElement(nomeUsuarioVerdadeiro).sendKeys(nomeVerdadeiro);
+    }
+
+    public void preencherEmail(String email) throws InterruptedException {
+
+        getDriver().findElement(this.email).sendKeys(email);
+    }
+
+    public void preencherNivelAcesso(String acesso) throws InterruptedException {
+
+        getDriver().findElement(nivelAcesso).sendKeys(acesso);
     }
 
     public ArrayList<String> validaUsuarioCriado() throws InterruptedException {
 
         Utils.esperarElementoClicavel(botaoAdicionarUsuario, Duration.ofSeconds(25));
         getDriver().findElement(botaoGerenciarUsuarios).click();
-
-
         ArrayList<String> list = new ArrayList<>();
-
-        Utils.esperarElementoVisivel(validarUsuarioCadastrado,Duration.ofSeconds(20));
+        Utils.esperarElementoVisivel(validarUsuarioCadastrado, Duration.ofSeconds(20));
         String usuario = String.valueOf(getDriver().findElement(validarUsuarioCadastrado).getText());
         list.add(usuario);
         String nomeVerdadeiro = String.valueOf(getDriver().findElement(By.xpath("//tr/td[text()='Teste Nome Usuário']")).getText());
@@ -115,11 +119,8 @@ public class UsuarioPage extends UsuarioRun {
 
         Utils.esperarElementoClicavel(botaoAdicionarUsuario, Duration.ofSeconds(25));
         getDriver().findElement(botaoGerenciarUsuarios).click();
-
-
         ArrayList<String> list = new ArrayList<>();
-
-        Utils.esperarElementoVisivel(validarUsuarioComNumero,Duration.ofSeconds(20));
+        Utils.esperarElementoVisivel(validarUsuarioComNumero, Duration.ofSeconds(20));
         String usuario = String.valueOf(getDriver().findElement(validarUsuarioComNumero).getText());
         list.add(usuario);
 
@@ -128,13 +129,10 @@ public class UsuarioPage extends UsuarioRun {
 
     public ArrayList<String> validaUsuarioNomeEditado() throws InterruptedException {
 
-
-        Utils.esperarElementoVisivel(botaoGerenciarUsuarios,Duration.ofSeconds(30));
+        Utils.esperarElementoVisivel(botaoGerenciarUsuarios, Duration.ofSeconds(30));
         getDriver().findElement(botaoGerenciarUsuarios).click();
-
         ArrayList<String> list = new ArrayList<>();
-
-        Utils.esperarElementoVisivel(validarUsuarioEditado,Duration.ofSeconds(40));
+        Utils.esperarElementoVisivel(validarUsuarioEditado, Duration.ofSeconds(40));
         String usuario = String.valueOf(getDriver().findElement(validarUsuarioEditado).getText());
         list.add(usuario);
 
@@ -143,13 +141,10 @@ public class UsuarioPage extends UsuarioRun {
 
     public ArrayList<String> validaUsuarioNomeVerdadeiroEditado() throws InterruptedException {
 
-
-        Utils.esperarElementoVisivel(botaoGerenciarUsuarios,Duration.ofSeconds(30));
+        Utils.esperarElementoVisivel(botaoGerenciarUsuarios, Duration.ofSeconds(30));
         getDriver().findElement(botaoGerenciarUsuarios).click();
-
         ArrayList<String> list = new ArrayList<>();
-
-        Utils.esperarElementoVisivel(validarUsuarioNomeVerdadeiroEditado,Duration.ofSeconds(40));
+        Utils.esperarElementoVisivel(validarUsuarioNomeVerdadeiroEditado, Duration.ofSeconds(40));
         String nomeVerdadeiro = String.valueOf(getDriver().findElement(validarUsuarioNomeVerdadeiroEditado).getText());
         list.add(nomeVerdadeiro);
 
@@ -158,13 +153,10 @@ public class UsuarioPage extends UsuarioRun {
 
     public ArrayList<String> validaEmail() throws InterruptedException {
 
-
-        Utils.esperarElementoVisivel(botaoGerenciarUsuarios,Duration.ofSeconds(30));
+        Utils.esperarElementoVisivel(botaoGerenciarUsuarios, Duration.ofSeconds(30));
         getDriver().findElement(botaoGerenciarUsuarios).click();
-
         ArrayList<String> list = new ArrayList<>();
-
-        Utils.esperarElementoVisivel(validarEmail,Duration.ofSeconds(40));
+        Utils.esperarElementoVisivel(validarEmail, Duration.ofSeconds(40));
         String email = String.valueOf(getDriver().findElement(validarEmail).getText());
         list.add(email);
 
@@ -173,46 +165,56 @@ public class UsuarioPage extends UsuarioRun {
 
     public ArrayList<String> validaNivelAcesso() throws InterruptedException {
 
-
-        Utils.esperarElementoVisivel(botaoGerenciarUsuarios,Duration.ofSeconds(30));
+        Utils.esperarElementoVisivel(botaoGerenciarUsuarios, Duration.ofSeconds(30));
         getDriver().findElement(botaoGerenciarUsuarios).click();
-
         ArrayList<String> list = new ArrayList<>();
-
-        Utils.esperarElementoVisivel(validarNivel,Duration.ofSeconds(40));
+        Utils.esperarElementoVisivel(validarNivel, Duration.ofSeconds(40));
         String email = String.valueOf(getDriver().findElement(validarNivel).getText());
         list.add(email);
 
         return list;
     }
 
+    public String validaUsuarioExcluido() throws InterruptedException {
+
+        try {
+            Utils.esperarElementoVisivel(validarUsuarioExcluido, Duration.ofSeconds(20));
+            String sucesso = String.valueOf(getDriver().findElement(validarUsuarioExcluido).getText());
+
+            return sucesso;
+        } catch (Exception e) {
+            String retorno = String.valueOf(e.getMessage().subSequence(0, 68));
+
+            return retorno;
+        }
+    }
+
     public String vericaUsuarioComMesmoNome() throws InterruptedException {
 
         String retornoErro = getDriver().findElement(retornoUsuarioNomeIgual).getText();
-        return retornoErro;
 
+        return retornoErro;
     }
 
     public String vericaUsuarioSemNome() throws InterruptedException {
+
         String retornoErro = getDriver().findElement(retornoUsuarioSemNome).getText();
-        return retornoErro;
 
+        return retornoErro;
     }
-    public String vericaUsuarioMesmoEmail() throws InterruptedException {
-        String retornoErro = getDriver().findElement(retornoUsuarioEmailIgual).getText();
-        return retornoErro;
 
+    public String vericaUsuarioMesmoEmail() throws InterruptedException {
+
+        String retornoErro = getDriver().findElement(retornoUsuarioEmailIgual).getText();
+
+        return retornoErro;
     }
 
     public String vericaCaractereEspecialNome() throws InterruptedException {
+
         String retornoErro = getDriver().findElement(retornoCaractereEspecialNome).getText();
+
         return retornoErro;
-
-    }
-
-    public void clicarUsuario(String usuario) throws InterruptedException {
-
-        getDriver().findElement(By.linkText(usuario)).click();
     }
 
     public void editaNomeUsuario(String nome) throws InterruptedException {
@@ -238,24 +240,4 @@ public class UsuarioPage extends UsuarioRun {
         //getDriver().findElement(editaNivelAcesso).clear();
         getDriver().findElement(editaNivelAcesso).sendKeys(nivel);
     }
-
-    public void clicarExcluir() throws InterruptedException {
-
-        getDriver().findElement(botaoExcluirUsuario).click();
-        getDriver().findElement(confirmaExcluirUsuario).click();
-    }
-
-    public String validaUsuarioExcluido() throws InterruptedException {
-
-        try {
-            Utils.esperarElementoVisivel(validarUsuarioExcluido, Duration.ofSeconds(20));
-            String sucesso = String.valueOf(getDriver().findElement(validarUsuarioExcluido).getText());
-            return sucesso;
-        }catch (Exception e){
-            String retorno = String.valueOf(e.getMessage().subSequence(0,68));
-            return retorno;
-        }
-
-    }
-
 }

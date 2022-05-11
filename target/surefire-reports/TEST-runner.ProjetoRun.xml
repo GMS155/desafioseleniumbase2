@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="14" failures="0" name="runner.ProjetoRun" time="93.171" errors="0" skipped="0">
+<testsuite tests="14" failures="0" name="runner.ProjetoRun" time="106.757" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\zulu8.58.0.13-ca-fx-jdk8.0.312-win_x64\jre\bin"/>
@@ -66,18 +66,18 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Criação de projetos" name="Criar um projeto sem preencher o nome do projeto" time="5.906"/>
-  <testcase classname="Criação de projetos" name="Criar um projeto com sucesso" time="6.938"/>
-  <testcase classname="Criação de projetos" name="Criar um projeto com nome repetido" time="5.897"/>
-  <testcase classname="Criação de projetos" name="Criar projeto com caractere especial no campo nome" time="6.845"/>
-  <testcase classname="Criação de projetos" name="Criar projeto com número no campo nome" time="6.901"/>
-  <testcase classname="Criação de projetos" name="Editar campo nome projeto com sucesso" time="4.552"/>
-  <testcase classname="Criação de projetos" name="Editar campo estado do projeto com sucesso #1" time="4.476"/>
-  <testcase classname="Criação de projetos" name="Editar campo estado do projeto com sucesso #2" time="4.551"/>
-  <testcase classname="Criação de projetos" name="Editar campo estado do projeto com sucesso #3" time="4.447"/>
-  <testcase classname="Criação de projetos" name="Editar campo habilitado do projeto com sucesso" time="4.556"/>
-  <testcase classname="Criação de projetos" name="Editar campo visibilidade do projeto com sucesso" time="4.498"/>
-  <testcase classname="Criação de projetos" name="Editar campo descrição do projeto com sucesso" time="4.511"/>
-  <testcase classname="Criação de projetos" name="Editar campo nome com parâmetro vazio" time="4.284"/>
-  <testcase classname="Criação de projetos" name="Excluir projeto com sucesso" time="24.809"/>
+  <testcase classname="Criação de projetos" name="Criar um projeto sem preencher o nome do projeto" time="6.95"/>
+  <testcase classname="Criação de projetos" name="Criar um projeto com sucesso" time="8.116"/>
+  <testcase classname="Criação de projetos" name="Criar um projeto com nome repetido" time="6.933"/>
+  <testcase classname="Criação de projetos" name="Criar projeto com caractere especial no campo nome" time="7.788"/>
+  <testcase classname="Criação de projetos" name="Criar projeto com número no campo nome" time="7.844"/>
+  <testcase classname="Criação de projetos" name="Editar campo nome projeto com sucesso" time="5.386"/>
+  <testcase classname="Criação de projetos" name="Editar campo estado do projeto com sucesso #1" time="5.506"/>
+  <testcase classname="Criação de projetos" name="Editar campo estado do projeto com sucesso #2" time="5.226"/>
+  <testcase classname="Criação de projetos" name="Editar campo estado do projeto com sucesso #3" time="5.275"/>
+  <testcase classname="Criação de projetos" name="Editar campo habilitado do projeto com sucesso" time="5.328"/>
+  <testcase classname="Criação de projetos" name="Editar campo visibilidade do projeto com sucesso" time="5.625"/>
+  <testcase classname="Criação de projetos" name="Editar campo descrição do projeto com sucesso" time="5.603"/>
+  <testcase classname="Criação de projetos" name="Editar campo nome com parâmetro vazio" time="5.283"/>
+  <testcase classname="Criação de projetos" name="Excluir projeto com sucesso" time="25.894"/>
 </testsuite>

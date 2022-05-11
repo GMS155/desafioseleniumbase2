@@ -1,14 +1,20 @@
 stages:
   - test
 
-test:
+Login:
+  stage: test
+  tags:
+    - ci
+  script:
+    - echo "Teste Automatico"
+    - mvn -Dtest=LoginRun test
+
+Projeto:
   stage: test
   tags:
     - ci
   script:
     - echo "Teste Automatico"
     - mvn -Dtest=ProjetoRun test
-
-
 
 

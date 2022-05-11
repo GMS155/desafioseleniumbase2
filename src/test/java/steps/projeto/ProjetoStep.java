@@ -23,25 +23,21 @@ public class ProjetoStep extends ProjetoRun {
     @Dado("que o usuario tenha feito o login com sucesso")
     public void queOUsuarioTenhaFeitoOLoginComSucesso() throws InterruptedException {
 
-
         loginPage.preendheUsuario("administrator");
         loginPage.clicarBotaoEntrar();
         loginPage.preencheSenha("root");
         loginPage.clicarBotaoEntrar();
-
     }
 
     @Dado("que o usuario esteja na pagina de login do Mantis")
     public void queOUsuarioEstejaNaPaginaDeLoginDoMantis() throws InterruptedException {
 
-        //projetoPage.acessarAplicacao();
         loginPage.acessarAplicacao();
     }
 
 
     @Quando("acessar a tela de criacao de projeto")
     public void acessarATelaDeCriacaoDeProjeto() throws InterruptedException {
-
 
         projetoPage.clicarBotaoGerenciar();
         projetoPage.clicarBotaoGerenciarProjetos();
@@ -50,6 +46,7 @@ public class ProjetoStep extends ProjetoRun {
 
     @E("clicar no botao de salvar projeto")
     public void clicarNoBotãoDeSalvarProjeto() throws InterruptedException {
+
         projetoPage.clicarBotaoAdicionarProjeto();
     }
 
@@ -61,12 +58,13 @@ public class ProjetoStep extends ProjetoRun {
 
     @E("preencher o nome do projeto")
     public void preencherONomeDoProjeto() throws InterruptedException {
+
         projetoPage.preencherNomeProjeto("Projeto01");
     }
 
-
     @E("preencher o estado do projeto")
     public void preencherOEstadoDoProjeto() throws InterruptedException {
+
         projetoPage.selecionaEstado("obsoleto");
     }
 
@@ -78,21 +76,19 @@ public class ProjetoStep extends ProjetoRun {
 
     @E("selecionar a visibilidade do projeto")
     public void selecionarAVisibilidadeDoProjeto() throws InterruptedException {
+
         projetoPage.selecionaVisibilidade("privado");
     }
 
-
     @Entao("o sistema deve efetuar o cadastro com sucesso")
     public void oSistemaDeveEfetuarOCadastroComSucesso() throws InterruptedException {
-        ArrayList<String> list = projetoPage.validaProjetoCriado();
 
+        ArrayList<String> list = projetoPage.validaProjetoCriado();
         Assert.assertEquals("Valida cadastro nome projeto com sucesso", list.get(0), "Projeto01");
         Assert.assertEquals("Valida cadastro estado projeto com sucesso", list.get(1), "obsoleto");
         Assert.assertEquals("Valida cadastro habilitado projeto com sucesso", list.get(2), "");
         Assert.assertEquals("Valida cadastro visibilidade projeto com sucesso", list.get(3), "privado");
         Assert.assertEquals("Valida cadastro descricao com sucesso", list.get(4), "Projeto criado como teste");
-
-
     }
 
     @Entao("o sistema deve efetuar o cadastro editado com sucesso")
@@ -119,7 +115,6 @@ public class ProjetoStep extends ProjetoRun {
     public void oSistemaDeveEmitirUmaMensagemDeErro() throws InterruptedException {
 
         Assert.assertEquals("Valida mensagem Erro nome igual", projetoPage.vericaProjetoComMesmoNome(), "APPLICATION ERROR #701");
-
     }
 
     @E("preencher o nome do projeto com caractere especial")
@@ -133,11 +128,11 @@ public class ProjetoStep extends ProjetoRun {
 
         ArrayList<String> list = projetoPage.validaProjetoCriadoComCaractereEspecial();
         Assert.assertEquals("Valida cadastro com caractere especial com sucesso", list.get(0), "*&!##@@=");
-
     }
 
     @E("preencher o nome do projeto com numero")
     public void preencherONomeDoProjetoComNumero() throws InterruptedException {
+
         projetoPage.preencherNomeProjeto("8989448489846546");
     }
 
@@ -146,8 +141,6 @@ public class ProjetoStep extends ProjetoRun {
 
         ArrayList<String> list = projetoPage.validaProjetoCriadoComNumero();
         Assert.assertEquals("Valida cadastro com caractere especial com sucesso", list.get(0), "8989448489846546");
-
-
     }
 
     @Quando("acessar a tela de gerencia de projeto")
@@ -155,9 +148,7 @@ public class ProjetoStep extends ProjetoRun {
 
         projetoPage.clicarBotaoGerenciar();
         projetoPage.clicarBotaoGerenciarProjetos();
-
     }
-
 
     @E("definir o nome do projeto {string}")
     public void definirONomeDoProjeto(String nome) throws InterruptedException {
@@ -175,18 +166,17 @@ public class ProjetoStep extends ProjetoRun {
     public void definirOEstadoDoProjeto(String estado) throws InterruptedException {
 
         projetoPage.editaEstado(estado);
-
     }
 
     @Entao("o sistema deve efetuar o cadastro do {} editado com sucesso")
     public void oSistemaDeveEfetuarOCadastroDoEstadoEditadoComSucesso(String estado) throws InterruptedException {
 
         Assert.assertEquals("Valida edição estado com sucesso", projetoPage.validaEstadoEditado(estado), estado);
-
     }
 
     @E("clicar no campo habilitado")
     public void clicarNoCampoHabilitado() throws InterruptedException {
+
         projetoPage.clicarhabilitado();
     }
 
@@ -194,8 +184,6 @@ public class ProjetoStep extends ProjetoRun {
     public void oSistemaDeveEfetuarAAlteracaoDoHabilitadoComSucesso() throws InterruptedException {
 
         Assert.assertEquals("Valida alteração habilitado com sucesso", projetoPage.validaProjetoHabilitadoEditado(), "");
-
-
     }
 
     @E("definir a visibilidade do projeto {string}")
@@ -208,31 +196,29 @@ public class ProjetoStep extends ProjetoRun {
     public void oSistemaDeveEfetuarAAlteracaoDaVisibilidadeComSucesso() throws InterruptedException {
 
         Assert.assertEquals("Valida alteração visibilidade com sucesso", projetoPage.validaProjetoVisibilidadeEditado(), "privado");
-
     }
-
 
     @E("preencher a descricao do projeto {string}")
     public void preencherADescricaoDoProjeto(String descricao) throws InterruptedException {
 
         projetoPage.prencherDescricao(descricao);
-
     }
 
     @Entao("o sistema deve efetuar a alteracao da descricao com sucesso")
     public void oSistemaDeveEfetuarAAlteracaoDaDescricaoComSucesso() throws InterruptedException {
 
         Assert.assertEquals("Valida alteração visibilidade com sucesso", projetoPage.validaProjetoDescricaoEditado(), "Projeto criado e alterado com sucesso");
-
     }
 
     @E("definir a descricao do projeto {string}")
     public void definirADescricaoDoProjeto(String descricao) throws InterruptedException {
+
         projetoPage.editaDescricaoProjeto(descricao);
     }
 
     @E("clicar no botao apagar projeto")
     public void clicarNoBotaoApagarProjeto() throws InterruptedException {
+
         projetoPage.clicarExcluir();
         projetoPage.clicarExcluir();
     }
@@ -240,8 +226,7 @@ public class ProjetoStep extends ProjetoRun {
     @Entao("o sistema deve excluir com sucesso")
     public void oSistemaDeveExcluirComSucesso() throws InterruptedException {
 
-        Assert.assertNotEquals("Valida alteração visibilidade com sucesso",projetoPage.validaProjetoExcluido(), "Teste projeto SQL 06");
-
+        Assert.assertNotEquals("Valida alteração visibilidade com sucesso", projetoPage.validaProjetoExcluido(), "Teste projeto SQL 06");
     }
 
     @AfterStep

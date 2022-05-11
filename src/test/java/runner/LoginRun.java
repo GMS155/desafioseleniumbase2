@@ -7,16 +7,16 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {"pretty"},
+        plugin = {"pretty","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
         monochrome = false,
         features = "classpath:features/login.feature",
-        tags = "@soEsse",
+        //tags = "@soEsse",
         glue = {"steps.login"},
         snippets = CucumberOptions.SnippetType.CAMELCASE
 
 
 )
-public class Run extends RunBase {
+public class LoginRun extends RunBase {
 /*
     public static WebDriver driver;
     static ProjetosDBSteps projetosDBSteps;

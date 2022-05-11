@@ -8,10 +8,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {"pretty"},
+        plugin = {"pretty","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
         monochrome = false,
         features = "classpath:features/subprojeto.feature",
-        tags = "@SoEsse",
+        //tags = "@SoEsse",
         glue = {"steps.subprojeto", "steps.login"},
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )

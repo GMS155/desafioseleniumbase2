@@ -1,18 +1,17 @@
 package support;
 
 
-
 import java.sql.*;
 import java.util.ArrayList;
 
 public class DBUtils {
 
-    private static String getStringConnection(){
-        return "jdbc:mysql://"+
-                "localhost" +"/"+"bugtracker";
+    private static String getStringConnection() {
+        return "jdbc:mysql://" +
+                "localhost" + "/" + "bugtracker";
     }
 
-    public static ArrayList<String> getQueryResult(String query){
+    public static ArrayList<String> getQueryResult(String query) {
         ArrayList<String> arrayList = null;
         Connection connection = null;
 
@@ -24,13 +23,11 @@ public class DBUtils {
             stmt = connection.createStatement();
             ResultSet rs = stmt.executeQuery(query);
 
-            if(!rs.isBeforeFirst()){
+            if (!rs.isBeforeFirst()) {
                 return null;
-            }
-
-            else{
+            } else {
                 int numberOfColumns;
-                ResultSetMetaData metadata=null;
+                ResultSetMetaData metadata = null;
 
                 arrayList = new ArrayList<String>();
                 metadata = rs.getMetaData();
@@ -38,7 +35,7 @@ public class DBUtils {
 
                 while (rs.next()) {
                     int i = 1;
-                    while(i <= numberOfColumns) {
+                    while (i <= numberOfColumns) {
                         arrayList.add(rs.getString(i++));
                     }
                 }
@@ -46,7 +43,7 @@ public class DBUtils {
 
         } catch (Exception e) {
             e.printStackTrace();
-        } finally{
+        } finally {
             try {
                 connection.close();
             } catch (SQLException e) {
@@ -56,7 +53,7 @@ public class DBUtils {
         return arrayList;
     }
 
-    public static ArrayList<String> executeQuery(String query){
+    public static ArrayList<String> executeQuery(String query) {
         Connection connection = null;
 
         try {
@@ -69,7 +66,7 @@ public class DBUtils {
 
         } catch (Exception e) {
             e.printStackTrace();
-        } finally{
+        } finally {
             try {
                 connection.close();
             } catch (SQLException e) {

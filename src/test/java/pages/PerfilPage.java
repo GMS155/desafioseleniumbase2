@@ -28,13 +28,11 @@ public class PerfilPage extends PerfilRun {
     public void clicarBotaoGerenciar() throws InterruptedException {
 
         getDriver().findElement(menuGerenciar).click();
-
     }
 
     public void clicarBotaoGerenciarProjetos() throws InterruptedException {
 
         getDriver().findElement(botaoGerenciarPerfis).click();
-
     }
 
     public void clicarBotaoApagarPerfis() throws InterruptedException {
@@ -42,42 +40,36 @@ public class PerfilPage extends PerfilRun {
         getDriver().findElement(botaoExcluirPerfil).click();
         Utils.esperarElementoVisivel(botaoConfirmaExclusaoPerfil, Duration.ofSeconds(20));
         getDriver().findElement(botaoConfirmaExclusaoPerfil).click();
-
-    }
-
-    public void preencherPlataforma(String plataforma) throws InterruptedException {
-
-        getDriver().findElement(nomePlataforma).sendKeys(plataforma);
-
-    }
-
-    public void preencherSO(String so) throws InterruptedException {
-
-        getDriver().findElement(nomeSo).sendKeys(so);
-
-    }
-
-    public void preencherVersao(String versao) throws InterruptedException {
-
-        getDriver().findElement(nomeVersao).sendKeys(versao);
-
-    }
-
-    public void preencherDescricao(String descricao) throws InterruptedException {
-
-        getDriver().findElement(nomeDescricao).sendKeys(descricao);
-
     }
 
     public void clicarBotaoAdicionarPerfil() throws InterruptedException {
 
         getDriver().findElement(botaoAdicionarPerfil).click();
-
     }
 
-    public ArrayList<String> valisdaPerfilCriado() {
-        ArrayList<String> list = new ArrayList<>();
+    public void preencherPlataforma(String plataforma) throws InterruptedException {
 
+        getDriver().findElement(nomePlataforma).sendKeys(plataforma);
+    }
+
+    public void preencherSO(String so) throws InterruptedException {
+
+        getDriver().findElement(nomeSo).sendKeys(so);
+    }
+
+    public void preencherVersao(String versao) throws InterruptedException {
+
+        getDriver().findElement(nomeVersao).sendKeys(versao);
+    }
+
+    public void preencherDescricao(String descricao) throws InterruptedException {
+
+        getDriver().findElement(nomeDescricao).sendKeys(descricao);
+    }
+
+    public ArrayList<String> validaPerfilCriado() {
+
+        ArrayList<String> list = new ArrayList<>();
         Utils.esperarElementoVisivel(validarPlataformaCadastrado, Duration.ofSeconds(20));
         String plataforma = String.valueOf(getDriver().findElement(validarPlataformaCadastrado).getText());
         list.add(plataforma);
@@ -90,13 +82,12 @@ public class PerfilPage extends PerfilRun {
     }
 
     public void verificaTelaAdicionaPerfil() throws InterruptedException {
+
         Boolean visible = getDriver().findElement(By.xpath("//h4[@class='widget-title lighter']")).isDisplayed();
         Assert.assertEquals(true, visible);
-
     }
 
     public String validaPerfilExcluido() throws InterruptedException {
-
 
         try {
             Utils.esperarElementoVisivel(validarPerfilExcluido, Duration.ofSeconds(20));
@@ -106,7 +97,6 @@ public class PerfilPage extends PerfilRun {
             String retorno = String.valueOf(e.getMessage().subSequence(0, 68));
             return retorno;
         }
-
     }
 }
 
