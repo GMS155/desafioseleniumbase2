@@ -9,11 +9,6 @@ Funcionalidade: Criação de projetos
     E que o usuario tenha feito o login com sucesso
 
 
-  Cenário: Criar um projeto sem preencher o nome do projeto
-    Quando acessar a tela de criacao de projeto
-    E clicar no botao de salvar projeto
-    Então o sistema deve permanecer na mesma tela de cadastro
-
   Cenário: Criar um projeto com sucesso
     Quando acessar a tela de criacao de projeto
     E preencher o nome do projeto
@@ -23,6 +18,11 @@ Funcionalidade: Criação de projetos
     E preencher a descricao do projeto "Projeto criado como teste"
     E clicar no botao de salvar projeto
     Então o sistema deve efetuar o cadastro com sucesso
+
+  Cenário: Criar um projeto sem preencher o nome do projeto
+    Quando acessar a tela de criacao de projeto
+    E clicar no botao de salvar projeto
+    Então o sistema deve permanecer na mesma tela de cadastro
 
   Cenário: Criar um projeto com nome repetido
     E que tenha cadastrado um projeto

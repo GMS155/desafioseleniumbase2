@@ -37,17 +37,17 @@ public class GlobalParameters {
         }
 
         BROWSER_DEFAULT = properties.getProperty("browser.default");
-        EXECUTION = properties.getProperty("execution");
-        TIMEOUT_DEFAULT = Integer.parseInt(properties.getProperty("timeout.default"));
-        SELENIUM_HUB = properties.getProperty("selenium.hub");
-        URL_DEFAULT = properties.getProperty("url.default");
-        REPORT_NAME = properties.getProperty("report.name");
-        GET_SCREENSHOT_FOR_EACH_STEP = Boolean.parseBoolean(properties.getProperty("get.screenshot.for.each.step"));
-        DOWNLOAD_DEFAULT_PATH = properties.getProperty("download.defaul.path");
-        REPORT_PATH = properties.getProperty("report.path");
-        DB_URL = properties.getProperty("db.url");
-        DB_SID = properties.getProperty("db.sid");
-        DB_USER = properties.getProperty("db.user");
-        DB_PASSWORD = properties.getProperty("db.password");
+//        EXECUTION = properties.getProperty("execution");
+//        TIMEOUT_DEFAULT = Integer.parseInt(properties.getProperty("timeout.default"));
+//        SELENIUM_HUB = properties.getProperty("selenium.hub");
+//        URL_DEFAULT = properties.getProperty("url.default");
+//        REPORT_NAME = properties.getProperty("report.name");
+//        GET_SCREENSHOT_FOR_EACH_STEP = Boolean.parseBoolean(properties.getProperty("get.screenshot.for.each.step"));
+//        DOWNLOAD_DEFAULT_PATH = properties.getProperty("download.defaul.path");
+//        REPORT_PATH = properties.getProperty("report.path");
+//        DB_URL = properties.getProperty("db.url");
+//        DB_SID = properties.getProperty("db.sid");
+//        DB_USER = properties.getProperty("db.user");
+//        DB_PASSWORD = properties.getProperty("db.password");
     }
 }
