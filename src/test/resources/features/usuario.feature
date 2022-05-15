@@ -12,7 +12,7 @@ Funcionalidade: Criação de usuários
   Cenário: Criar um usuário com sucesso
     Quando acessar a tela de criacao de usuario
     E preencher o nome de usuario "GMS"
-    E preencher o nome verdadeiro do usuario "Teste Nome Usuário"
+    E preencher o nome verdadeiro do usuario "Teste Nome Usuario"
     E preencher o email "Usuario@hotmail.com"
     E preencher o nivel de acesso
     E selecionar a opcao protegido

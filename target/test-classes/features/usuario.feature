@@ -8,11 +8,11 @@ Funcionalidade: Criação de usuários
     Dado que o usuario esteja na pagina de login do Mantis
     E que o usuario tenha feito o login com sucesso
 
-  @SoEsse
+
   Cenário: Criar um usuário com sucesso
     Quando acessar a tela de criacao de usuario
     E preencher o nome de usuario "GMS"
-    E preencher o nome verdadeiro do usuario "Teste Nome Usuário"
+    E preencher o nome verdadeiro do usuario "Teste Nome Usuario"
     E preencher o email "Usuario@hotmail.com"
     E preencher o nivel de acesso
     E selecionar a opcao protegido
@@ -39,7 +39,6 @@ Funcionalidade: Criação de usuários
     E clicar no botao de criar usuario
     Então o sistema deve emitir uma mensagem de erro do caractere especial
 
-  @SoEsse
   Cenário: Criar um usuário sem nome
     Quando acessar a tela de criacao de usuario
     E preencher o nome de usuario ""
@@ -63,9 +62,6 @@ Funcionalidade: Criação de usuários
     E preencher o email "usuario.igual@hotmail.com"
     E clicar no botao de criar usuario
     Então o sistema deve emitir uma mensagem de erro do email igual
-
-    #--------------------------- editar nome -------------------
-
 
   Cenário: Editar campo nome usuário com sucesso
     Quando acessar a tela dos usuarios cadastrados
@@ -101,9 +97,6 @@ Funcionalidade: Criação de usuários
     E editar o nivel de acesso "desenvolvedor"
     E clicar no botao de atualizar usuario
     Então o sistema deve editar o nível com sucesso
-
-     #--------------------------- excluir usuário -------------------
-
 
   Cenário: Excluir usuário com sucesso
     Quando acessar a tela dos usuarios cadastrados

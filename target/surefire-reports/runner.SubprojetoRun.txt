@@ -1,0 +1,371 @@
+-------------------------------------------------------------------------------
+Test set: runner.SubprojetoRun
+-------------------------------------------------------------------------------
+Tests run: 34, Failures: 0, Errors: 34, Skipped: 0, Time elapsed: 354.944 sec <<< FAILURE!
+Criar um subprojeto com sucesso #1(Criação de subprojetos)  Time elapsed: 12.666 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Criar um subprojeto com sucesso #2(Criação de subprojetos)  Time elapsed: 10.149 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Criar um subprojeto com sucesso #3(Criação de subprojetos)  Time elapsed: 10.229 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Criar um subprojeto sem nome(Criação de subprojetos)  Time elapsed: 9.518 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Criar um subprojeto com o mesmo nome do subprojeto(Criação de subprojetos)  Time elapsed: 9.87 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Criar um subprojeto com o mesmo nome do projeto(Criação de subprojetos)  Time elapsed: 9.593 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Criar um subprojeto com número no nome #1(Criação de subprojetos)  Time elapsed: 9.742 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@Então("o sistema deve efetuar o cadastro do subprojeto com número com sucesso")
+public void oSistemaDeveEfetuarOCadastroDoSubprojetoComNúmeroComSucesso() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Criar um subprojeto com número no nome #2(Criação de subprojetos)  Time elapsed: 9.968 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@Então("o sistema deve efetuar o cadastro do subprojeto com número com sucesso")
+public void oSistemaDeveEfetuarOCadastroDoSubprojetoComNúmeroComSucesso() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Criar um subprojeto com número no nome #3(Criação de subprojetos)  Time elapsed: 9.962 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@Então("o sistema deve efetuar o cadastro do subprojeto com número com sucesso")
+public void oSistemaDeveEfetuarOCadastroDoSubprojetoComNúmeroComSucesso() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Criar um subprojeto com caracter especial no nome #1(Criação de subprojetos)  Time elapsed: 10.802 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Criar um subprojeto com caracter especial no nome #2(Criação de subprojetos)  Time elapsed: 10.556 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Criar um subprojeto com caracter especial no nome #3(Criação de subprojetos)  Time elapsed: 10.256 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Criar um subprojeto sem preencher a descrição #1(Criação de subprojetos)  Time elapsed: 9.98 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Criar um subprojeto sem preencher a descrição #2(Criação de subprojetos)  Time elapsed: 9.934 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Criar um subprojeto sem preencher a descrição #3(Criação de subprojetos)  Time elapsed: 10.191 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Editar nome do subprojeto com sucesso #1(Criação de subprojetos)  Time elapsed: 10.231 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Editar nome do subprojeto com sucesso #2(Criação de subprojetos)  Time elapsed: 10.363 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Editar nome do subprojeto com sucesso #3(Criação de subprojetos)  Time elapsed: 10.063 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Editar estado do subprojeto com sucesso #1(Criação de subprojetos)  Time elapsed: 9.997 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Editar estado do subprojeto com sucesso #2(Criação de subprojetos)  Time elapsed: 10.086 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Editar estado do subprojeto com sucesso #3(Criação de subprojetos)  Time elapsed: 10.231 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Editar habilitado do subprojeto com sucesso #1(Criação de subprojetos)  Time elapsed: 10.632 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Editar habilitado do subprojeto com sucesso #2(Criação de subprojetos)  Time elapsed: 11.01 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Editar habilitado do subprojeto com sucesso #3(Criação de subprojetos)  Time elapsed: 10.429 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Editar visibilidade do subprojeto com sucesso #1(Criação de subprojetos)  Time elapsed: 10.582 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Editar visibilidade do subprojeto com sucesso #2(Criação de subprojetos)  Time elapsed: 10.394 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Editar visibilidade do subprojeto com sucesso #3(Criação de subprojetos)  Time elapsed: 10.613 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Editar descrição do subprojeto com sucesso #1(Criação de subprojetos)  Time elapsed: 11.49 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Editar descrição do subprojeto com sucesso #2(Criação de subprojetos)  Time elapsed: 10.433 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Editar descrição do subprojeto com sucesso #3(Criação de subprojetos)  Time elapsed: 10.707 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Editar um subprojeto com o nome vazio(Criação de subprojetos)  Time elapsed: 10.457 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Excluir subprojeto com sucesso #1(Criação de subprojetos)  Time elapsed: 10.462 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Excluir subprojeto com sucesso #2(Criação de subprojetos)  Time elapsed: 10.044 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Excluir subprojeto com sucesso #3(Criação de subprojetos)  Time elapsed: 10.16 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "clicar no botão de salvar subprojeto" is undefined. You can implement it using the snippet(s) below:
+
+@Quando("clicar no botão de salvar subprojeto")
+public void clicarNoBotãoDeSalvarSubprojeto() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+

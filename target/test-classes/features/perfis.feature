@@ -8,7 +8,7 @@ Funcionalidade: Gerenciamento de perfis globais
     Dado que o usuario esteja na pagina de login do Mantis
     E que o usuario tenha feito o login com sucesso
 
-  @SoEsse
+
   Cenário: Adicionar um perfil com sucesso
     Quando acessar a tela de gerenciar perfil
     E preencher a plataforma corretamente
@@ -17,7 +17,6 @@ Funcionalidade: Gerenciamento de perfis globais
     E preencher a descricao do sistema corretamente
     E clicar no botao adicionar perfil
     Então o sistema deve cadastrar o perfil com sucesso
-
 
   Cenário: Adicionar um perfil com campo plataforma em branco
     Quando acessar a tela de gerenciar perfil
@@ -28,7 +27,6 @@ Funcionalidade: Gerenciamento de perfis globais
     E clicar no botao adicionar perfil
     Então o sistema deve permanecer na mesma tela de cadastro
 
-
   Cenário: Adicionar um perfil com campo SO em branco
     Quando acessar a tela de gerenciar perfil
     E preencher a plataforma corretamente
@@ -38,7 +36,6 @@ Funcionalidade: Gerenciamento de perfis globais
     E clicar no botao adicionar perfil
     Então o sistema deve permanecer na mesma tela de cadastro
 
-
   Cenário: Adicionar um perfil com campo versão SO em branco
     Quando acessar a tela de gerenciar perfil
     E preencher a plataforma corretamente
@@ -47,7 +44,6 @@ Funcionalidade: Gerenciamento de perfis globais
     E preencher a descricao do sistema corretamente
     E clicar no botao adicionar perfil
     Então o sistema deve permanecer na mesma tela de cadastro
-
 
   Cenário: Excluir perfil com sucesso
     Quando acessar a tela de gerenciar perfil

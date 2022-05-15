@@ -78,7 +78,7 @@ public class UsuarioStep {
 
         ArrayList<String> list = usuarioPage.validaUsuarioCriado();
         Assert.assertEquals("Valida cadastro nome usuário com sucesso", list.get(0), "GMS");
-        Assert.assertEquals("Valida cadastro nome verdadeiro usuário com sucesso", list.get(1), "Teste Nome Usuário");
+        Assert.assertEquals("Valida cadastro nome verdadeiro usuário com sucesso", list.get(1), "Teste Nome Usuario");
         Assert.assertEquals("Valida cadastro email usuário com sucesso", list.get(2), "Usuario@hotmail.com");
         Assert.assertEquals("Valida cadastro nível de acesso com sucesso", list.get(3), "visualizador");
         Assert.assertEquals("Valida cadastro protegido com sucesso", list.get(4), " ");

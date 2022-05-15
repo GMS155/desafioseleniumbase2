@@ -18,7 +18,7 @@ public class SubProjetoPage extends SubprojetoRun {
     private By visibilidadeSubProjeto = By.id("project-view-state");
     private By botaoConfirmaAdicionarSubProjeto = By.xpath("//input[@class='btn btn-primary btn-white btn-round']");
     private By botaoAdicionarSubProjeto = By.xpath("//button[@class='btn btn-sm btn-primary btn-white btn-round']");
-    private By validarSubProjetoCadastrado = By.xpath("//a[text()='» Subprojeto 02']");
+    private By validarSubProjetoCadastrado = By.xpath("//td/a[text()='» Subprojeto 02']");
     private By validarSubProjetoCadastradoComNumero = By.xpath("//a[text()='» 123456789']");
     private By validarSubProjetoCadastradoComCaracterEspecial = By.xpath("//a[text()='» #$#$%#%&*(!!_>']");
     private By retornoSubProjetoNomeIgual = By.xpath("//p[text()='APPLICATION ERROR #701']");

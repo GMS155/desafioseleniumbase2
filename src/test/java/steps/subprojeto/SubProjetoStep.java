@@ -73,8 +73,15 @@ public class SubProjetoStep extends SubprojetoRun {
         subprojeto.prencherDescricao(descricao);
     }
 
-    @E("clicar no botão de salvar subprojeto")
+//    @E("clicar no botão de salvar subprojeto")
+//    public void clicarNoBotãoDeSalvarSubprojeto() throws InterruptedException {
+//
+//        subprojeto.clicarBotaoConfirmaSubProjeto();
+//    }
+
+    @Quando("clicar no botão de salvar subprojeto")
     public void clicarNoBotãoDeSalvarSubprojeto() throws InterruptedException {
+        // Write code here that turns the phrase above into concrete actions
 
         subprojeto.clicarBotaoConfirmaSubProjeto();
     }
