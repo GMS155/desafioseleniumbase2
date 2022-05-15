@@ -17,4 +17,26 @@ Projeto:
     - echo "Teste Automatico"
     - mvn -Dtest=ProjetoRun test
 
+Perfil:
+  stage: test
+  tags:
+    - ci
+  script:
+    - echo "Teste Automatico"
+    - mvn -Dtest=PerfilRun test
 
+SubProjeto:
+  stage: test
+  tags:
+    - ci
+  script:
+    - echo "Teste Automatico"
+    - mvn -Dtest=SubprojetoRun test
+
+Usuario:
+  stage: test
+  tags:
+    - ci
+  script:
+    - echo "Teste Automatico"
+    - mvn -Dtest=UsuarioRun test

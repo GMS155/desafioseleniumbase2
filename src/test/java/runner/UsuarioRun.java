@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         plugin = {"pretty","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
         monochrome = false,
         features = "classpath:features/usuario.feature",
-        tags = "@SoEsse",
+        //tags = "@SoEsse",
         glue = {"steps.usuario"},
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )
