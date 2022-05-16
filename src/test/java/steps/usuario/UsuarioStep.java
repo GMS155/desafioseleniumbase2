@@ -185,8 +185,8 @@ public class UsuarioStep {
         usuarioPage.editaNivel(nivel);
     }
 
-    @Entao("o sistema deve editar o nível com sucesso")
-    public void oSistemaDeveEditarONívelComSucesso() throws InterruptedException {
+    @Entao("o sistema deve editar o nivel com sucesso")
+    public void oSistemaDeveEditarONivelComSucesso() throws InterruptedException {
 
         ArrayList<String> list = usuarioPage.validaNivelAcesso();
         Assert.assertEquals("Valida edição nível com sucesso", list.get(0), "desenvolvedor");

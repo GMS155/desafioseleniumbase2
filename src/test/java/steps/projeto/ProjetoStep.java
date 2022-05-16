@@ -232,10 +232,10 @@ public class ProjetoStep extends ProjetoRun {
     @AfterStep
     public static void tirarScreenshot(Scenario scenario) {
 
-        if (scenario.isFailed()) {
+        //if (scenario.isFailed()) {
             final byte[] screenshot = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", "image");
-        }
+        //}
     }
 
 }

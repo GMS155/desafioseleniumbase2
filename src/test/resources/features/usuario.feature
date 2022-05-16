@@ -96,7 +96,7 @@ Funcionalidade: Criação de usuários
     E clicar no campo usuario "Usuario1"
     E editar o nivel de acesso "desenvolvedor"
     E clicar no botao de atualizar usuario
-    Então o sistema deve editar o nível com sucesso
+    Então o sistema deve editar o nivel com sucesso
 
   Cenário: Excluir usuário com sucesso
     Quando acessar a tela dos usuarios cadastrados

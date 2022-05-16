@@ -1,14 +1,21 @@
 package steps.perfil;
 
+import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.pt.*;
 import org.junit.Assert;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import pages.LoginPage;
 import pages.PerfilPage;
 import pages.ProjetoPage;
+import runner.PerfilRun;
+import steps.projeto.ProjetoStep;
 
 import java.util.ArrayList;
 
-public class PerfilStep {
+public class PerfilStep extends PerfilRun {
 
     ProjetoPage projetoPage = new ProjetoPage();
     LoginPage loginPage = new LoginPage();
@@ -111,4 +118,14 @@ public class PerfilStep {
 
         Assert.assertNotEquals("Valida exclusão perfil com sucesso", perfilPage.validaPerfilExcluido(), "Insert SQL");
     }
+
+    @After
+    public static void tirarScreenshot(Scenario scenario) {
+
+        //if (scenario.isFailed()) {
+        final byte[] screenshot = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES);
+        scenario.attach(screenshot, "image/png", "image");
+        //}
+    }
+
 }
