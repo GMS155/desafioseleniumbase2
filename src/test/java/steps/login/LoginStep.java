@@ -11,7 +11,7 @@ import runner.LoginRun;
 public class LoginStep extends LoginRun {
 
     LoginPage loginPage = new LoginPage();
-    String retornoMensagemErro = "Sua conta pode estar desativada ou bloqueada ou o nome de usu√°rio e a senha que voc√™ digitou n√£o est√£o corretos.";
+    String retornoMensagemErro = "Sua conta pode estar desativada ou bloqueada ou o nome de usu·rio e a senha que vocÍ digitou n„o est„o corretos.";
 
 
     @Dado("que o usuario preencha o campo usuario corretamente")
