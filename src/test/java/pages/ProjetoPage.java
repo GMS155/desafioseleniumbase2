@@ -26,7 +26,7 @@ public class ProjetoPage extends ProjetoRun {
     private By validarProjetoComCaracterEspecial = By.xpath("//td/a[text()='*&!##@@=']");
     private By validarProjetoComNumero = By.xpath("//td/a[text()='8989448489846546']");
     private By validarProjetoExcluido = By.xpath("//td/a[text()='Teste projeto SQL 06']");
-    private By validarProjetoNomeEditado = By.xpath("//td/a[text()='» Subprojeto 02 editado']");
+    private By validarProjetoNomeEditado = By.xpath("//td/a[text()='� Subprojeto 02 editado']");
     private By validarSubProjetoNomeEditado = By.xpath("//td/a[text()='Teste projeto SQL 01_Editado']");
     private By retornoProjetoNomeIgual = By.xpath("//p[text()='APPLICATION ERROR #701']");
     private By habilitadoEditado = By.xpath("//i[@class=\"fa fa-check fa-lg\"]");
@@ -34,7 +34,7 @@ public class ProjetoPage extends ProjetoRun {
     private By visibilidadeEditado = By.xpath("//td[text()='privado']");
     private By descricaoEditado = By.xpath("//td[text()='Projeto criado e alterado com sucesso']");
     private By esperaProjetoVisivel = By.xpath("//td/a[text()='Teste projeto SQL 02']");
-    private By esperaSubProjetoVisivel = By.xpath("//td/a[text()='» Subprojeto 02']");
+
 
 
     public void clicarBotaoGerenciar() throws InterruptedException {
@@ -76,11 +76,7 @@ public class ProjetoPage extends ProjetoRun {
         getDriver().findElement(esperaProjetoVisivel).click();
     }
 
-    public void clicarSubProjetoNovamente(String nome) throws InterruptedException {
 
-        Utils.esperarElementoClicavel(esperaSubProjetoVisivel, Duration.ofSeconds(20));
-        getDriver().findElement(esperaSubProjetoVisivel).click();
-    }
 
     public void clicarhabilitado() throws InterruptedException {
 
@@ -189,8 +185,8 @@ public class ProjetoPage extends ProjetoRun {
 
     public String validaProjetoNomeEditado() throws InterruptedException {
 
-        Utils.esperarElementoVisivel(validarProjetoNomeEditado, Duration.ofSeconds(20));
-        String sucesso = String.valueOf(getDriver().findElement(validarProjetoNomeEditado).getText());
+        Utils.esperarElementoVisivel(validarSubProjetoNomeEditado, Duration.ofSeconds(20));
+        String sucesso = String.valueOf(getDriver().findElement(validarSubProjetoNomeEditado).getText());
         return sucesso;
     }
 

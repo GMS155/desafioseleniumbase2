@@ -64,7 +64,7 @@ public class SubProjetoStep extends SubprojetoRun {
     @E("selecionar a visibilidade do projeto")
     public void selecionarAVisibilidadeDoProjeto() throws InterruptedException {
 
-        subprojeto.selecionaVisibilidade("p√∫blico");
+        subprojeto.selecionaVisibilidade("p˙blico");
     }
 
     @E("preencher a descricao do subprojeto {string}")
@@ -73,29 +73,30 @@ public class SubProjetoStep extends SubprojetoRun {
         subprojeto.prencherDescricao(descricao);
     }
 
-//    @E("clicar no bot√£o de salvar subprojeto")
-//    public void clicarNoBot√£oDeSalvarSubprojeto() throws InterruptedException {
+//    @E("clicar no bot„o de salvar subprojeto")
+//    public void clicarNoBot„oDeSalvarSubprojeto() throws InterruptedException {
 //
 //        subprojeto.clicarBotaoConfirmaSubProjeto();
 //    }
 
-    @Quando("clicar no bot√£o de salvar subprojeto")
-    public void clicarNoBot√£oDeSalvarSubprojeto() throws InterruptedException {
-        // Write code here that turns the phrase above into concrete actions
 
+    @Quando("clicar no botao de salvar subprojeto")
+    public void clicarNoBotaoDeSalvarSubprojeto() throws InterruptedException {
+        // Write code here that turns the phrase above into concrete actions
         subprojeto.clicarBotaoConfirmaSubProjeto();
     }
+
 
     @Entao("o sistema deve efetuar o cadastro do subprojeto com sucesso")
     public void oSistemaDeveEfetuarOCadastroDoSubprojetoComSucesso() throws InterruptedException {
 
-        Assert.assertEquals("Valida cadastro subprojeto com sucesso", subprojeto.validaSubProjetoCriado(), "¬ª Subprojeto 02");
+        Assert.assertEquals("Valida cadastro subprojeto com sucesso", subprojeto.validaSubProjetoCriado(), "ª Subprojeto 02");
     }
 
     @Entao("o sistema deve efetuar o cadastro do subprojeto editado com sucesso")
     public void oSistemaDeveEfetuarOCadastroDoSubprojetoEditadoComSucesso() throws InterruptedException {
 
-        Assert.assertEquals("Valida cadastro projeto com sucesso", projetoPage.validaProjetoNomeEditado(), "¬ª Subprojeto 02 editado");
+        Assert.assertEquals("Valida cadastro projeto com sucesso", projetoPage.validaProjetoNomeEditado(), "ª Subprojeto 02 editado");
     }
 
     @E("clicar no projeto desejado {string}")
@@ -124,22 +125,21 @@ public class SubProjetoStep extends SubprojetoRun {
         subprojeto.verificaTelaAdicionaSubProjeto();
     }
 
-    @Entao("o sistema deve efetuar o cadastro do subprojeto com n√∫mero com sucesso")
-    public void oSistemaDeveEfetuarOCadastroDoSubprojetoComN√∫meroComSucesso() throws InterruptedException {
+    @Entao("o sistema deve efetuar o cadastro do subprojeto com n˙mero com sucesso")
+    public void oSistemaDeveEfetuarOCadastroDoSubprojetoComN˙meroComSucesso() throws InterruptedException {
 
-        Assert.assertEquals("Valida cadastro subprojeto com sucesso", subprojeto.validaSubProjetoCriadoComNumero(), "¬ª 123456789");
+        Assert.assertEquals("Valida cadastro subprojeto com sucesso", subprojeto.validaSubProjetoCriadoComNumero(), "ª 123456789");
     }
 
     @Entao("o sistema deve efetuar o cadastro do subprojeto com caracter especial com sucesso")
     public void oSistemaDeveEfetuarOCadastroDoSubprojetoComCaracterEspecialComSucesso() throws InterruptedException {
 
-        Assert.assertEquals("Valida cadastro subprojeto com sucesso", subprojeto.validaSubProjetoCriadoComCaracterEspecial(), "¬ª #$#$%#%&*(!!_>");
+        Assert.assertEquals("Valida cadastro subprojeto com sucesso", subprojeto.validaSubProjetoCriadoComCaracterEspecial(), "ª #$#$%#%&*(!!_>");
     }
 
     @E("clicar no subprojeto desejado {string} novamente")
-    public void clicarNoSubprojetoDesejadoNovamente(String subprojeto) throws InterruptedException {
-
-        projetoPage.clicarSubProjetoNovamente(subprojeto);
+    public void clicarNoSubprojetoDesejadoNovamente(String subprojetos) throws InterruptedException {
+       subprojeto.clicarSubProjetoNovamente(subprojetos);
     }
 
     @Entao("o sistema deve realizar o cadastro do subprojeto com estado editado com sucesso")
@@ -150,7 +150,7 @@ public class SubProjetoStep extends SubprojetoRun {
     @Entao("o sistema deve realizar o cadastro do subprojeto com {} com sucesso")
     public void oSistemaDeveRealizarOCadastroDoSubprojetoComEstadoEditadoComSucesso(String estado) throws InterruptedException {
 
-        Assert.assertEquals("Valida edi√ß√£o estado com sucesso", projetoPage.validaEstadoEditado(estado), estado);
+        Assert.assertEquals("Valida ediÁ„o estado com sucesso", projetoPage.validaEstadoEditado(estado), estado);
     }
 
     @E("clicar no campo habilitado")
@@ -162,7 +162,7 @@ public class SubProjetoStep extends SubprojetoRun {
     @Entao("o sistema deve efetuar a alteracao do habilitado com sucesso")
     public void oSistemaDeveEfetuarAAlteracaoDoHabilitadoComSucesso() throws InterruptedException {
 
-        Assert.assertNotEquals("Valida altera√ß√£o habilitado com sucesso", projetoPage.validaProjetoHabilitadoEditadoDesmarcado(), "");
+        Assert.assertNotEquals("Valida alteraÁ„o habilitado com sucesso", projetoPage.validaProjetoHabilitadoEditadoDesmarcado(), "");
     }
 
     @E("selecionar a visibilidade do projeto novamente")
@@ -174,7 +174,7 @@ public class SubProjetoStep extends SubprojetoRun {
     @Entao("o sistema deve efetuar a alteracao da visiblidade com sucesso")
     public void oSistemaDeveEfetuarAAlteracaoDaVisiblidadeComSucesso() throws InterruptedException {
 
-        Assert.assertEquals("Valida altera√ß√£o visibilidade com sucesso", projetoPage.validaProjetoVisibilidadeEditado(), "privado");
+        Assert.assertEquals("Valida alteraÁ„o visibilidade com sucesso", projetoPage.validaProjetoVisibilidadeEditado(), "privado");
     }
 
     @E("preencher a descricao do subprojeto {string} novamente")
@@ -186,7 +186,7 @@ public class SubProjetoStep extends SubprojetoRun {
     @Entao("o sistema deve efetuar a alteracao da descricao com sucesso")
     public void oSistemaDeveEfetuarAAlteracaoDaDescricaoComSucesso() throws InterruptedException {
 
-        Assert.assertEquals("Valida altera√ß√£o descri√ß√£o com sucesso", subprojeto.validaSubProjetoDescricaoEditado(), "SubProjeto criado como teste editado");
+        Assert.assertEquals("Valida alteraÁ„o descriÁ„o com sucesso", subprojeto.validaSubProjetoDescricaoEditado(), "SubProjeto criado como teste editado");
     }
 
     @E("clicar no botao apagar projeto")
@@ -199,6 +199,6 @@ public class SubProjetoStep extends SubprojetoRun {
     @Entao("o sistema deve excluir com sucesso")
     public void oSistemaDeveExcluirComSucesso() throws InterruptedException {
 
-        Assert.assertNotEquals("Valida exclus√£o com sucesso", subprojeto.validaSubProjetoExcluido(), "Subprojeto 02");
+        Assert.assertNotEquals("Valida exclus„o com sucesso", subprojeto.validaSubProjetoExcluido(), "Subprojeto 02");
     }
 }

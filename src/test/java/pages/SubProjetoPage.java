@@ -18,14 +18,15 @@ public class SubProjetoPage extends SubprojetoRun {
     private By visibilidadeSubProjeto = By.id("project-view-state");
     private By botaoConfirmaAdicionarSubProjeto = By.xpath("//input[@class='btn btn-primary btn-white btn-round']");
     private By botaoAdicionarSubProjeto = By.xpath("//button[@class='btn btn-sm btn-primary btn-white btn-round']");
-    private By validarSubProjetoCadastrado = By.xpath("//td/a[text()='Â» Subprojeto 02']");
-    private By validarSubProjetoCadastradoComNumero = By.xpath("//a[text()='Â» 123456789']");
-    private By validarSubProjetoCadastradoComCaracterEspecial = By.xpath("//a[text()='Â» #$#$%#%&*(!!_>']");
+    private By validarSubProjetoCadastrado = By.xpath("//td/a[text()='» Subprojeto 02']");
+    private By validarSubProjetoCadastradoComNumero = By.xpath("//a[text()='» 123456789']");
+    private By validarSubProjetoCadastradoComCaracterEspecial = By.xpath("//a[text()='» #$#$%#%&*(!!_>']");
     private By retornoSubProjetoNomeIgual = By.xpath("//p[text()='APPLICATION ERROR #701']");
-    private By validarSubProjetoNomeEditado = By.xpath("//td/a[text()='Â» Subprojeto 02 editado']");
+    private By validarSubProjetoNomeEditado = By.xpath("//td/a[text()='» Subprojeto 02 editado']");
     private By descricaoEditado = By.xpath("//td[text()='SubProjeto criado como teste editado']");
     private By botaoExcluirSubProjeto = By.xpath("//input[@value='Apagar Projeto']");
     private By validarSubProjetoExcluido = By.xpath("//td/a[text()='Subprojeto 02']");
+    private By esperaSubProjetoVisivel = By.xpath("//td/a[text()='» Subprojeto 02']");
 
 
     public void clicarSubProjeto() throws InterruptedException {
@@ -108,6 +109,12 @@ public class SubProjetoPage extends SubprojetoRun {
 
         Boolean visible = getDriver().findElement(By.xpath("//h4[@class='widget-title lighter']")).isDisplayed();
         Assert.assertEquals(true, visible);
+    }
+
+    public void clicarSubProjetoNovamente(String nome) throws InterruptedException {
+
+        Utils.esperarElementoClicavel(esperaSubProjetoVisivel, Duration.ofSeconds(20));
+        getDriver().findElement(esperaSubProjetoVisivel).click();
     }
 
     public String validaSubProjetoNomeEditado() throws InterruptedException {

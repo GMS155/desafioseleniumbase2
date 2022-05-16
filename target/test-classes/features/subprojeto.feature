@@ -8,7 +8,7 @@ Funcionalidade: Criação de subprojetos
     Dado que o usuario esteja na pagina de login do Mantis
     E que o usuario tenha feito o login com sucesso
 
-
+  @SoEsse
   Esquema do Cenário: Criar um subprojeto com sucesso
     Quando clicar no projeto desejado "Teste projeto SQL 02"
     E clicar no botao de cadastrar subProjeto
@@ -18,7 +18,7 @@ Funcionalidade: Criação de subprojetos
     E marcar a opcao herdar categorias da tarefa pai
     E selecionar a visibilidade do projeto
     E preencher a descricao do subprojeto "SubProjeto criado como teste"
-    E clicar no botão de salvar subprojeto
+    E clicar no botao de salvar subprojeto
     Então o sistema deve efetuar o cadastro do subprojeto com sucesso
 
     Exemplos:
@@ -30,25 +30,25 @@ Funcionalidade: Criação de subprojetos
   Cenário: Criar um subprojeto sem nome
     Quando clicar no projeto desejado "Teste projeto SQL 02"
     E clicar no botao de cadastrar subProjeto
-    E clicar no botão de salvar subprojeto
+    E clicar no botao de salvar subprojeto
     Então o sistema deve permanecer na mesma tela de cadastro
 
   Cenário: Criar um subprojeto com o mesmo nome do subprojeto
     Quando clicar no projeto desejado "Teste projeto SQL 02"
     E clicar no botao de cadastrar subProjeto
     E preencher o nome do subprojeto "Subprojeto 02"
-    E clicar no botão de salvar subprojeto
+    E clicar no botao de salvar subprojeto
     E clicar no projeto desejado "Teste projeto SQL 02" novamente
     E clicar no botao de cadastrar subProjeto
     E preencher o nome do subprojeto "Subprojeto 02"
-    E clicar no botão de salvar subprojeto
+    E clicar no botao de salvar subprojeto
     Então o sistema deve emitir uma mensagem de erro
 
   Cenário: Criar um subprojeto com o mesmo nome do projeto
     Quando clicar no projeto desejado "Teste projeto SQL 02"
     E clicar no botao de cadastrar subProjeto
     E preencher o nome do subprojeto "Teste projeto SQL 02"
-    E clicar no botão de salvar subprojeto
+    E clicar no botao de salvar subprojeto
     Então o sistema deve emitir uma mensagem de erro
 
   Esquema do Cenário: Criar um subprojeto com número no nome
@@ -59,7 +59,7 @@ Funcionalidade: Criação de subprojetos
     E marcar a opcao herdar categorias globais
     E marcar a opcao herdar categorias da tarefa pai
     E selecionar a visibilidade do projeto
-    E clicar no botão de salvar subprojeto
+    E clicar no botao de salvar subprojeto
     Então o sistema deve efetuar o cadastro do subprojeto com número com sucesso
 
     Exemplos:
@@ -76,7 +76,7 @@ Funcionalidade: Criação de subprojetos
     E marcar a opcao herdar categorias globais
     E marcar a opcao herdar categorias da tarefa pai
     E selecionar a visibilidade do projeto
-    E clicar no botão de salvar subprojeto
+    E clicar no botao de salvar subprojeto
     Então o sistema deve efetuar o cadastro do subprojeto com caracter especial com sucesso
 
     Exemplos:
@@ -93,7 +93,7 @@ Funcionalidade: Criação de subprojetos
     E marcar a opcao herdar categorias globais
     E marcar a opcao herdar categorias da tarefa pai
     E selecionar a visibilidade do projeto
-    E clicar no botão de salvar subprojeto
+    E clicar no botao de salvar subprojeto
     Então o sistema deve efetuar o cadastro do subprojeto com sucesso
 
     Exemplos:
@@ -102,7 +102,7 @@ Funcionalidade: Criação de subprojetos
       | release         |
       | obsoleto        |
 
-  @SoEsse
+
   Esquema do Cenário: Editar nome do subprojeto com sucesso
     Quando clicar no projeto desejado "Teste projeto SQL 02"
     E clicar no botao de cadastrar subProjeto
@@ -112,10 +112,10 @@ Funcionalidade: Criação de subprojetos
     E marcar a opcao herdar categorias da tarefa pai
     E selecionar a visibilidade do projeto
     E preencher a descricao do subprojeto "SubProjeto criado como teste"
-    E clicar no botão de salvar subprojeto
+    E clicar no botao de salvar subprojeto
     E clicar no subprojeto desejado "Subprojeto 02" novamente
     E preencher o nome do subprojeto "Subprojeto 02 editado"
-    E clicar no botão de salvar subprojeto
+    E clicar no botao de salvar subprojeto
     Então o sistema deve efetuar o cadastro do subprojeto editado com sucesso
 
     Exemplos:
@@ -133,10 +133,10 @@ Funcionalidade: Criação de subprojetos
     E marcar a opcao herdar categorias da tarefa pai
     E selecionar a visibilidade do projeto
     E preencher a descricao do subprojeto "SubProjeto criado como teste"
-    E clicar no botão de salvar subprojeto
+    E clicar no botao de salvar subprojeto
     E clicar no subprojeto desejado "Subprojeto 02" novamente
     E definir o estado do subprojeto <estadoEditado>
-    E clicar no botão de salvar subprojeto
+    E clicar no botao de salvar subprojeto
     Então o sistema deve realizar o cadastro do subprojeto com <estadoEditado> com sucesso
 
     Exemplos:
@@ -154,10 +154,10 @@ Funcionalidade: Criação de subprojetos
     E marcar a opcao herdar categorias da tarefa pai
     E selecionar a visibilidade do projeto
     E preencher a descricao do subprojeto "SubProjeto criado como teste"
-    E clicar no botão de salvar subprojeto
+    E clicar no botao de salvar subprojeto
     E clicar no subprojeto desejado "Subprojeto 02" novamente
     E clicar no campo habilitado
-    E clicar no botão de salvar subprojeto
+    E clicar no botao de salvar subprojeto
     Então o sistema deve efetuar a alteracao do habilitado com sucesso
 
     Exemplos:
@@ -175,10 +175,10 @@ Funcionalidade: Criação de subprojetos
     E marcar a opcao herdar categorias da tarefa pai
     E selecionar a visibilidade do projeto
     E preencher a descricao do subprojeto "SubProjeto criado como teste"
-    E clicar no botão de salvar subprojeto
+    E clicar no botao de salvar subprojeto
     E clicar no subprojeto desejado "Subprojeto 02" novamente
     E  selecionar a visibilidade do projeto novamente
-    E clicar no botão de salvar subprojeto
+    E clicar no botao de salvar subprojeto
     Então o sistema deve efetuar a alteracao da visiblidade com sucesso
 
     Exemplos:
@@ -196,10 +196,10 @@ Funcionalidade: Criação de subprojetos
     E marcar a opcao herdar categorias da tarefa pai
     E selecionar a visibilidade do projeto
     E preencher a descricao do subprojeto "SubProjeto criado como teste"
-    E clicar no botão de salvar subprojeto
+    E clicar no botao de salvar subprojeto
     E clicar no subprojeto desejado "Subprojeto 02" novamente
     E preencher a descricao do subprojeto "SubProjeto criado como teste editado" novamente
-    E clicar no botão de salvar subprojeto
+    E clicar no botao de salvar subprojeto
     Então o sistema deve efetuar a alteracao da descricao com sucesso
 
     Exemplos:
@@ -212,11 +212,11 @@ Funcionalidade: Criação de subprojetos
     Quando clicar no projeto desejado "Teste projeto SQL 02"
     E clicar no botao de cadastrar subProjeto
     E preencher o nome do subprojeto "Subprojeto 02"
-    E clicar no botão de salvar subprojeto
+    E clicar no botao de salvar subprojeto
     E clicar no projeto desejado "Teste projeto SQL 02" novamente
     E clicar no botao de cadastrar subProjeto
     E preencher o nome do subprojeto ""
-    E clicar no botão de salvar subprojeto
+    E clicar no botao de salvar subprojeto
     Então o sistema deve permanecer na mesma tela de cadastro
 
   Esquema do Cenário: Excluir subprojeto com sucesso
@@ -228,7 +228,7 @@ Funcionalidade: Criação de subprojetos
     E marcar a opcao herdar categorias da tarefa pai
     E selecionar a visibilidade do projeto
     E preencher a descricao do subprojeto "SubProjeto criado como teste"
-    E clicar no botão de salvar subprojeto
+    E clicar no botao de salvar subprojeto
     E clicar no subprojeto desejado "Subprojeto 02" novamente
     E clicar no botao apagar projeto
     Então o sistema deve excluir com sucesso
