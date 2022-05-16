@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class UsuarioPage extends UsuarioRun {
 
     private By menuGerenciar = By.xpath("//i[@class='fa fa-gears menu-icon']");
-    private By botaoGerenciarUsuarios = By.xpath("//li/a[text()='Gerenciar Usu√°rios']");
+    private By botaoGerenciarUsuarios = By.xpath("//li/a[text()='Gerenciar Usu·rios']");
     private By botaoNovoUsuario = By.xpath("//a[@class='btn btn-primary btn-white btn-round btn-sm']");
     private By nomeUsuario = By.id("user-username");
     private By nomeEditado = By.id("edit-username");

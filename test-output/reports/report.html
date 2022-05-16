@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Build 1</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">mai 16, 2022 00:41:35</span></a>
+<a href="#"><span class="badge badge-primary">mai 16, 2022 00:53:04</span></a>
 </li>
 </ul>
 </div>
@@ -90,9 +90,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Criação de projetos</p>
+            <p class="name">Criação de subprojetos</p>
             <p class="text-sm">
-              <span>00:41:36</span> / <span>00:00:09:956</span>
+              <span>00:53:05</span> / <span>00:03:32:421</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -100,64 +100,1017 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Criação de projetos</h5>
-<span class='badge badge-success'>05.16.2022 00:41:36</span>
-<span class='badge badge-danger'>05.16.2022 00:41:46</span>
-<span class='badge badge-default'>00:00:09:956</span>
+<h5 class="test-status text-pass">Criação de subprojetos</h5>
+<span class='badge badge-success'>05.16.2022 00:53:05</span>
+<span class='badge badge-danger'>05.16.2022 00:56:37</span>
+<span class='badge badge-default'>00:03:32:421</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
 <div class="m-t-10 m-l-5"> Como usuário admin
-Eu quero acessar a seção de criação de projeto
-Para criar um projeto</div>
+Eu quero acessar a seção de criação de subprojeto
+Para criar um subprojeto</div>
 </div>
 </div>
 <div class="accordion mt-4">
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Editar campo visibilidade do projeto com sucesso</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Criar um subprojeto com sucesso</div>
       </div>
     </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="steps.projeto.ProjetoStep.queOUsuarioEstejaNaPaginaDeLoginDoMantis()">
-                <span>Dado que o usuario esteja na pagina de login do Mantis</span>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>Criar um subprojeto com sucesso</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Dado que o usuario esteja na pagina de login do Mantis</span>
       <div>
       </div>
-              </div>
-              <div class="step pass-bg" title="steps.projeto.ProjetoStep.queOUsuarioTenhaFeitoOLoginComSucesso()">
-                <span>E que o usuario tenha feito o login com sucesso</span>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E que o usuario tenha feito o login com sucesso</span>
       <div>
       </div>
-              </div>
-              <div class="step pass-bg" title="steps.projeto.ProjetoStep.acessarATelaDeGerenciaDeProjeto()">
-                <span>Quando acessar a tela de gerencia de projeto</span>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Quando clicar no projeto desejado "Teste projeto SQL 02"</span>
       <div>
       </div>
-              </div>
-              <div class="step pass-bg" title="steps.projeto.ProjetoStep.clicarNoProjetoDesejado(java.lang.String)">
-                <span>E clicar no projeto desejado "Teste projeto SQL 04"</span>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de cadastrar subProjeto</span>
       <div>
       </div>
-              </div>
-              <div class="step pass-bg" title="steps.projeto.ProjetoStep.definirAVisibilidadeDoProjeto(java.lang.String)">
-                <span>E definir a visibilidade do projeto "privado"</span>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E preencher o nome do subprojeto "Subprojeto 02"</span>
       <div>
       </div>
-              </div>
-              <div class="step pass-bg" title="steps.projeto.ProjetoStep.clicarNoBotÃ£oDeSalvarProjeto()">
-                <span>E clicar no botao de salvar projeto</span>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E definir o estado do subprojeto desenvolvimento</span>
       <div>
       </div>
-              </div>
-              <div class="step pass-bg" title="steps.projeto.ProjetoStep.oSistemaDeveEfetuarAAlteracaoDaVisibilidadeComSucesso()">
-                <span>Então o sistema deve efetuar a alteracao da visibilidade com sucesso</span>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E marcar a opcao herdar categorias globais</span>
       <div>
       </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E marcar a opcao herdar categorias da tarefa pai</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E selecionar a visibilidade do projeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E preencher a descricao do subprojeto "SubProjeto criado como teste"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de salvar subprojeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Então o sistema deve efetuar o cadastro do subprojeto com sucesso</span>
+      <div>
+      </div>
+                  </div>
               </div>
-          </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="16"><span class="badge log pass-bg mr-2">Pass</span>Criar um subprojeto com sucesso</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Dado que o usuario esteja na pagina de login do Mantis</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E que o usuario tenha feito o login com sucesso</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Quando clicar no projeto desejado "Teste projeto SQL 02"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de cadastrar subProjeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E preencher o nome do subprojeto "Subprojeto 02"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E definir o estado do subprojeto release</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E marcar a opcao herdar categorias globais</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E marcar a opcao herdar categorias da tarefa pai</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E selecionar a visibilidade do projeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E preencher a descricao do subprojeto "SubProjeto criado como teste"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de salvar subprojeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Então o sistema deve efetuar o cadastro do subprojeto com sucesso</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="29"><span class="badge log pass-bg mr-2">Pass</span>Criar um subprojeto com sucesso</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Dado que o usuario esteja na pagina de login do Mantis</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E que o usuario tenha feito o login com sucesso</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Quando clicar no projeto desejado "Teste projeto SQL 02"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de cadastrar subProjeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E preencher o nome do subprojeto "Subprojeto 02"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E definir o estado do subprojeto obsoleto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E marcar a opcao herdar categorias globais</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E marcar a opcao herdar categorias da tarefa pai</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E selecionar a visibilidade do projeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E preencher a descricao do subprojeto "SubProjeto criado como teste"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de salvar subprojeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Então o sistema deve efetuar o cadastro do subprojeto com sucesso</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="42"><span class="badge log pass-bg mr-2">Pass</span>Editar nome do subprojeto com sucesso</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="43"><span class="badge log pass-bg mr-2">Pass</span>Editar nome do subprojeto com sucesso</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Dado que o usuario esteja na pagina de login do Mantis</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E que o usuario tenha feito o login com sucesso</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Quando clicar no projeto desejado "Teste projeto SQL 02"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de cadastrar subProjeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E preencher o nome do subprojeto "Subprojeto 02"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E definir o estado do subprojeto desenvolvimento</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E marcar a opcao herdar categorias globais</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E marcar a opcao herdar categorias da tarefa pai</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E selecionar a visibilidade do projeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E preencher a descricao do subprojeto "SubProjeto criado como teste"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de salvar subprojeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no subprojeto desejado "Subprojeto 02" novamente</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E preencher o nome do subprojeto "Subprojeto 02 editado"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de salvar subprojeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Então o sistema deve efetuar o cadastro do subprojeto editado com sucesso</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="59"><span class="badge log pass-bg mr-2">Pass</span>Editar nome do subprojeto com sucesso</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Dado que o usuario esteja na pagina de login do Mantis</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E que o usuario tenha feito o login com sucesso</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Quando clicar no projeto desejado "Teste projeto SQL 02"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de cadastrar subProjeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E preencher o nome do subprojeto "Subprojeto 02"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E definir o estado do subprojeto release</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E marcar a opcao herdar categorias globais</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E marcar a opcao herdar categorias da tarefa pai</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E selecionar a visibilidade do projeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E preencher a descricao do subprojeto "SubProjeto criado como teste"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de salvar subprojeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no subprojeto desejado "Subprojeto 02" novamente</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E preencher o nome do subprojeto "Subprojeto 02 editado"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de salvar subprojeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Então o sistema deve efetuar o cadastro do subprojeto editado com sucesso</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="75"><span class="badge log pass-bg mr-2">Pass</span>Editar nome do subprojeto com sucesso</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Dado que o usuario esteja na pagina de login do Mantis</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E que o usuario tenha feito o login com sucesso</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Quando clicar no projeto desejado "Teste projeto SQL 02"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de cadastrar subProjeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E preencher o nome do subprojeto "Subprojeto 02"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E definir o estado do subprojeto obsoleto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E marcar a opcao herdar categorias globais</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E marcar a opcao herdar categorias da tarefa pai</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E selecionar a visibilidade do projeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E preencher a descricao do subprojeto "SubProjeto criado como teste"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de salvar subprojeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no subprojeto desejado "Subprojeto 02" novamente</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E preencher o nome do subprojeto "Subprojeto 02 editado"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de salvar subprojeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Então o sistema deve efetuar o cadastro do subprojeto editado com sucesso</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="91"><span class="badge log pass-bg mr-2">Pass</span>Editar estado do subprojeto com sucesso</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="92"><span class="badge log pass-bg mr-2">Pass</span>Editar estado do subprojeto com sucesso</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Dado que o usuario esteja na pagina de login do Mantis</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E que o usuario tenha feito o login com sucesso</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Quando clicar no projeto desejado "Teste projeto SQL 02"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de cadastrar subProjeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E preencher o nome do subprojeto "Subprojeto 02"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E definir o estado do subprojeto desenvolvimento</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E marcar a opcao herdar categorias globais</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E marcar a opcao herdar categorias da tarefa pai</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E selecionar a visibilidade do projeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E preencher a descricao do subprojeto "SubProjeto criado como teste"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de salvar subprojeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no subprojeto desejado "Subprojeto 02" novamente</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E definir o estado do subprojeto release</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de salvar subprojeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Então o sistema deve realizar o cadastro do subprojeto com release com sucesso</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="108"><span class="badge log pass-bg mr-2">Pass</span>Editar estado do subprojeto com sucesso</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Dado que o usuario esteja na pagina de login do Mantis</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E que o usuario tenha feito o login com sucesso</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Quando clicar no projeto desejado "Teste projeto SQL 02"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de cadastrar subProjeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E preencher o nome do subprojeto "Subprojeto 02"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E definir o estado do subprojeto release</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E marcar a opcao herdar categorias globais</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E marcar a opcao herdar categorias da tarefa pai</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E selecionar a visibilidade do projeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E preencher a descricao do subprojeto "SubProjeto criado como teste"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de salvar subprojeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no subprojeto desejado "Subprojeto 02" novamente</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E definir o estado do subprojeto desenvolvimento</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de salvar subprojeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Então o sistema deve realizar o cadastro do subprojeto com desenvolvimento com sucesso</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="124"><span class="badge log pass-bg mr-2">Pass</span>Editar estado do subprojeto com sucesso</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Dado que o usuario esteja na pagina de login do Mantis</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E que o usuario tenha feito o login com sucesso</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Quando clicar no projeto desejado "Teste projeto SQL 02"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de cadastrar subProjeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E preencher o nome do subprojeto "Subprojeto 02"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E definir o estado do subprojeto obsoleto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E marcar a opcao herdar categorias globais</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E marcar a opcao herdar categorias da tarefa pai</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E selecionar a visibilidade do projeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E preencher a descricao do subprojeto "SubProjeto criado como teste"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de salvar subprojeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no subprojeto desejado "Subprojeto 02" novamente</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E definir o estado do subprojeto release</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de salvar subprojeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Então o sistema deve realizar o cadastro do subprojeto com release com sucesso</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="140"><span class="badge log pass-bg mr-2">Pass</span>Editar habilitado do subprojeto com sucesso</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="141"><span class="badge log pass-bg mr-2">Pass</span>Editar habilitado do subprojeto com sucesso</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Dado que o usuario esteja na pagina de login do Mantis</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E que o usuario tenha feito o login com sucesso</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Quando clicar no projeto desejado "Teste projeto SQL 02"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de cadastrar subProjeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E preencher o nome do subprojeto "Subprojeto 02"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E definir o estado do subprojeto desenvolvimento</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E marcar a opcao herdar categorias globais</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E marcar a opcao herdar categorias da tarefa pai</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E selecionar a visibilidade do projeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E preencher a descricao do subprojeto "SubProjeto criado como teste"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de salvar subprojeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no subprojeto desejado "Subprojeto 02" novamente</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no campo habilitado</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de salvar subprojeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Então o sistema deve efetuar a alteracao do habilitado com sucesso</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="157"><span class="badge log pass-bg mr-2">Pass</span>Editar habilitado do subprojeto com sucesso</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Dado que o usuario esteja na pagina de login do Mantis</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E que o usuario tenha feito o login com sucesso</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Quando clicar no projeto desejado "Teste projeto SQL 02"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de cadastrar subProjeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E preencher o nome do subprojeto "Subprojeto 02"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E definir o estado do subprojeto release</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E marcar a opcao herdar categorias globais</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E marcar a opcao herdar categorias da tarefa pai</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E selecionar a visibilidade do projeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E preencher a descricao do subprojeto "SubProjeto criado como teste"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de salvar subprojeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no subprojeto desejado "Subprojeto 02" novamente</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no campo habilitado</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de salvar subprojeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Então o sistema deve efetuar a alteracao do habilitado com sucesso</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="173"><span class="badge log pass-bg mr-2">Pass</span>Editar habilitado do subprojeto com sucesso</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Dado que o usuario esteja na pagina de login do Mantis</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E que o usuario tenha feito o login com sucesso</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Quando clicar no projeto desejado "Teste projeto SQL 02"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de cadastrar subProjeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E preencher o nome do subprojeto "Subprojeto 02"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E definir o estado do subprojeto obsoleto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E marcar a opcao herdar categorias globais</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E marcar a opcao herdar categorias da tarefa pai</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E selecionar a visibilidade do projeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E preencher a descricao do subprojeto "SubProjeto criado como teste"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de salvar subprojeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no subprojeto desejado "Subprojeto 02" novamente</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no campo habilitado</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>E clicar no botao de salvar subprojeto</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Então o sistema deve efetuar a alteracao do habilitado com sucesso</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
         </div>
   </div>
 </div>
@@ -183,15 +1136,15 @@ Para criar um projeto</div>
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>1</span>
+<span class='badge log pass-bg'>16</span>
 </span>
 <p class="name">@SoEsse</p>
-<p class="duration text-sm">1 tests</p>
+<p class="duration text-sm">16 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
 <h4>@SoEsse</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
+<span status="pass" class='badge log pass-bg'>16 passed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -204,11 +1157,161 @@ Para criar um projeto</div>
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>00:41:36 AM</td>
+<td>00:53:05 AM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>Editar campo visibilidade do projeto com sucesso</a>
+<a href="#" class="linked" test-id='1' id='2'>Criar um subprojeto com sucesso</a>
 <div class="">
-<span class="badge badge-default">Criação de projetos.Editar campo visibilidade do projeto com sucesso</span>
+<span class="badge badge-default">Criação de subprojetos.Criar um subprojeto com sucesso</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:53:05 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>Criar um subprojeto com sucesso</a>
+<div class="">
+<span class="badge badge-default">Criação de subprojetos.Criar um subprojeto com sucesso</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:53:17 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='16'>Criar um subprojeto com sucesso</a>
+<div class="">
+<span class="badge badge-default">Criação de subprojetos.Criar um subprojeto com sucesso</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:53:29 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='29'>Criar um subprojeto com sucesso</a>
+<div class="">
+<span class="badge badge-default">Criação de subprojetos.Criar um subprojeto com sucesso</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:53:41 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='42'>Editar nome do subprojeto com sucesso</a>
+<div class="">
+<span class="badge badge-default">Criação de subprojetos.Editar nome do subprojeto com sucesso</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:53:41 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='43'>Editar nome do subprojeto com sucesso</a>
+<div class="">
+<span class="badge badge-default">Criação de subprojetos.Editar nome do subprojeto com sucesso</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:53:54 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='59'>Editar nome do subprojeto com sucesso</a>
+<div class="">
+<span class="badge badge-default">Criação de subprojetos.Editar nome do subprojeto com sucesso</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:54:06 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='75'>Editar nome do subprojeto com sucesso</a>
+<div class="">
+<span class="badge badge-default">Criação de subprojetos.Editar nome do subprojeto com sucesso</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:54:19 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='91'>Editar estado do subprojeto com sucesso</a>
+<div class="">
+<span class="badge badge-default">Criação de subprojetos.Editar estado do subprojeto com sucesso</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:54:19 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='92'>Editar estado do subprojeto com sucesso</a>
+<div class="">
+<span class="badge badge-default">Criação de subprojetos.Editar estado do subprojeto com sucesso</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:54:32 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='108'>Editar estado do subprojeto com sucesso</a>
+<div class="">
+<span class="badge badge-default">Criação de subprojetos.Editar estado do subprojeto com sucesso</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:54:45 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='124'>Editar estado do subprojeto com sucesso</a>
+<div class="">
+<span class="badge badge-default">Criação de subprojetos.Editar estado do subprojeto com sucesso</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:54:58 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='140'>Editar habilitado do subprojeto com sucesso</a>
+<div class="">
+<span class="badge badge-default">Criação de subprojetos.Editar habilitado do subprojeto com sucesso</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:54:58 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='141'>Editar habilitado do subprojeto com sucesso</a>
+<div class="">
+<span class="badge badge-default">Criação de subprojetos.Editar habilitado do subprojeto com sucesso</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:55:31 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='157'>Editar habilitado do subprojeto com sucesso</a>
+<div class="">
+<span class="badge badge-default">Criação de subprojetos.Editar habilitado do subprojeto com sucesso</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:56:04 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='173'>Editar habilitado do subprojeto com sucesso</a>
+<div class="">
+<span class="badge badge-default">Criação de subprojetos.Editar habilitado do subprojeto com sucesso</span>
 </div>
 </td>
 </tr>
@@ -229,13 +1332,13 @@ Para criar um projeto</div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>mai 16, 2022 00:41:35</h3>
+<h3>mai 16, 2022 00:53:04</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>mai 16, 2022 00:41:46</h3>
+<h3>mai 16, 2022 00:56:37</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -286,7 +1389,7 @@ Para criar um projeto</div>
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>1</b> scenarios passed</small></div>
+<div><small data-tooltip='100%'><b>12</b> scenarios passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -306,7 +1409,7 @@ Para criar um projeto</div>
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>7</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>171</b> steps passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -325,7 +1428,7 @@ Para criar um projeto</div>
 </div></div>
 <script>
 var timeline = {
-"Criação de projetos":9.956
+"Criação de subprojetos":212.421
 };
 </script>
 <div class="row">
@@ -336,7 +1439,7 @@ var timeline = {
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
 <td>@SoEsse</td>
-<td>1</td>
+<td>16</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -356,13 +1459,13 @@ failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 1,
+passChild: 12,
 failChild: 0,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 7,
+passGrandChild: 171,
 failGrandChild: 0,
 warningGrandChild: 0,
 skipGrandChild: 0,

@@ -102,7 +102,7 @@ Funcionalidade: Criação de subprojetos
       | release         |
       | obsoleto        |
 
-
+  @SoEsse
   Esquema do Cenário: Editar nome do subprojeto com sucesso
     Quando clicar no projeto desejado "Teste projeto SQL 02"
     E clicar no botao de cadastrar subProjeto
@@ -123,7 +123,7 @@ Funcionalidade: Criação de subprojetos
       | desenvolvimento |
       | release         |
       | obsoleto        |
-
+  @SoEsse
   Esquema do Cenário: Editar estado do subprojeto com sucesso
     Quando clicar no projeto desejado "Teste projeto SQL 02"
     E clicar no botao de cadastrar subProjeto
@@ -144,7 +144,7 @@ Funcionalidade: Criação de subprojetos
       | desenvolvimento | release         |
       | release         | desenvolvimento |
       | obsoleto        | release         |
-
+  @SoEsse
   Esquema do Cenário: Editar habilitado do subprojeto com sucesso
     Quando clicar no projeto desejado "Teste projeto SQL 02"
     E clicar no botao de cadastrar subProjeto

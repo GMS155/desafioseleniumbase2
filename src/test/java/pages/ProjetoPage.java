@@ -185,8 +185,8 @@ public class ProjetoPage extends ProjetoRun {
 
     public String validaProjetoNomeEditado() throws InterruptedException {
 
-        Utils.esperarElementoVisivel(validarSubProjetoNomeEditado, Duration.ofSeconds(20));
-        String sucesso = String.valueOf(getDriver().findElement(validarSubProjetoNomeEditado).getText());
+        Utils.esperarElementoVisivel(validarProjetoNomeEditado, Duration.ofSeconds(20));
+        String sucesso = String.valueOf(getDriver().findElement(validarProjetoNomeEditado).getText());
         return sucesso;
     }
 
