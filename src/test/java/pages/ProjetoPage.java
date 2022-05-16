@@ -31,7 +31,7 @@ public class ProjetoPage extends ProjetoRun {
     private By retornoProjetoNomeIgual = By.xpath("//p[text()='APPLICATION ERROR #701']");
     private By habilitadoEditado = By.xpath("//i[@class=\"fa fa-check fa-lg\"]");
     private By habilitadoEditadoDesmarcado = By.xpath("(//i[@class=\"fa fa-check fa-lg\"])[3]");
-    private By visibilidadeEditado = By.xpath("//td[text()='privado']");
+    private By visibilidadeEditado = By.xpath("//tr/td[text()='privado']");
     private By descricaoEditado = By.xpath("//td[text()='Projeto criado e alterado com sucesso']");
     private By esperaProjetoVisivel = By.xpath("//td/a[text()='Teste projeto SQL 02']");
 

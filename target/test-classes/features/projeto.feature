@@ -81,7 +81,7 @@ Funcionalidade: Criação de projetos
     E clicar no campo habilitado
     E clicar no botao de salvar projeto
     Então o sistema deve efetuar a alteracao do habilitado com sucesso
-
+  @SoEsse
   Cenário: Editar campo visibilidade do projeto com sucesso
     Quando acessar a tela de gerencia de projeto
     E clicar no projeto desejado "Teste projeto SQL 04"

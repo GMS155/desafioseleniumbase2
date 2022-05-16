@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class PerfilPage extends PerfilRun {
 
     private By menuGerenciar = By.xpath("//i[@class='fa fa-gears menu-icon']");
-    private By botaoGerenciarPerfis = By.xpath("//li/a[text()='Gerenciar PerfÃ­s Globais']");
+    private By botaoGerenciarPerfis = By.xpath("//li/a[text()='Gerenciar Perfís Globais']");
     private By nomePlataforma = By.id("platform");
     private By nomeSo = By.id("os");
     private By nomeVersao = By.id("os_build");
