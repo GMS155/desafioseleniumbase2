@@ -9,6 +9,7 @@ Login:
     - echo "Teste Automatico"
     - mvn -Dtest=LoginRun test
 
+
 Projeto:
   stage: test
   tags:
