@@ -1,7 +1,11 @@
 package steps.subprojeto;
 
+import io.cucumber.java.After;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.pt.*;
 import org.junit.Assert;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import pages.LoginPage;
 import pages.ProjetoPage;
 import pages.SubProjetoPage;
@@ -139,7 +143,7 @@ public class SubProjetoStep extends SubprojetoRun {
 
     @E("clicar no subprojeto desejado {string} novamente")
     public void clicarNoSubprojetoDesejadoNovamente(String subprojetos) throws InterruptedException {
-       subprojeto.clicarSubProjetoNovamente(subprojetos);
+        subprojeto.clicarSubProjetoNovamente(subprojetos);
     }
 
     @Entao("o sistema deve realizar o cadastro do subprojeto com estado editado com sucesso")
@@ -200,5 +204,14 @@ public class SubProjetoStep extends SubprojetoRun {
     public void oSistemaDeveExcluirComSucesso() throws InterruptedException {
 
         Assert.assertNotEquals("Valida exclusão com sucesso", subprojeto.validaSubProjetoExcluido(), "Subprojeto 02");
+    }
+
+    @After
+    public static void tirarScreenshot(Scenario scenario) {
+
+        //if (scenario.isFailed()) {
+        final byte[] screenshot = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES);
+        scenario.attach(screenshot, "image/png", "image");
+        //}
     }
 }

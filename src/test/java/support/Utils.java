@@ -16,13 +16,13 @@ public class Utils extends RunBase {
 
 
     public static void esperarElementoClicavel(By element, Duration tempo) {
-        WebDriverWait wait = new WebDriverWait(getDriver(), tempo);
+        WebDriverWait wait = new WebDriverWait(getDriver(), tempo.toSeconds());
         wait.until(ExpectedConditions.elementToBeClickable(element));
 
     }
 
     public static void esperarElementoVisivel(By element, Duration tempo) {
-        WebDriverWait wait = new WebDriverWait(getDriver(), tempo);
+        WebDriverWait wait = new WebDriverWait(getDriver(),tempo.toSeconds());
         wait.until(ExpectedConditions.visibilityOfElementLocated(element));
 
     }

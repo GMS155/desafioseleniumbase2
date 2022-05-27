@@ -1,0 +1,2 @@
+java -Dwebdriver.chrome.driver="chromedriver.exe" -Dwebdriver.edge.driver="MicrosoftWebDriver.exe" -Dwebdriver.gecko.driver="geckodriver.exe" -jar selenium-server.jar -role node -nodeConfig NodeDefaultConfig.json
+/k

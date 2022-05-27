@@ -27,6 +27,11 @@ public class LoginPage extends LoginRun {
         getDriver().get("http://localhost/mantisbt/login_page.php");
     }
 
+    public boolean permanecerTelaLogin(){
+        Boolean TestVisible = getDriver().findElement(By.id("tl_login_button")).isDisplayed();
+        return TestVisible;
+    }
+
     public void preendheUsuario(String usuario) {
 
         getDriver().findElement(campoUsuario).sendKeys(usuario);
