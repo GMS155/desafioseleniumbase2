@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="7" failures="0" name="runner.LoginRun" time="51.284" errors="0" skipped="0">
+<testsuite tests="7" failures="0" name="runner.LoginRun" time="43.474" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\zulu8.58.0.13-ca-fx-jdk8.0.312-win_x64\jre\bin"/>
@@ -66,11 +66,11 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Login no Mantis" name="Login com sucesso" time="9.307"/>
-  <testcase classname="Login no Mantis" name="Login com senha inválida" time="7.293"/>
-  <testcase classname="Login no Mantis" name="Login com usuário inválido" time="7.209"/>
-  <testcase classname="Login no Mantis" name="Login com usuário e login sem preencher" time="7.433"/>
-  <testcase classname="Login no Mantis" name="Login com usuário sem preencher" time="5.927"/>
-  <testcase classname="Login no Mantis" name="Login com o campo senha sem preencher" time="6.953"/>
-  <testcase classname="Login no Mantis" name="Login com sucesso usando Java Script" time="7.162"/>
+  <testcase classname="Login no Mantis" name="Login com sucesso" time="7.56"/>
+  <testcase classname="Login no Mantis" name="Login com senha inválida" time="6.197"/>
+  <testcase classname="Login no Mantis" name="Login com usuário inválido" time="5.934"/>
+  <testcase classname="Login no Mantis" name="Login com usuário e login sem preencher" time="6.213"/>
+  <testcase classname="Login no Mantis" name="Login com usuário sem preencher" time="5.012"/>
+  <testcase classname="Login no Mantis" name="Login com o campo senha sem preencher" time="6.105"/>
+  <testcase classname="Login no Mantis" name="Login com sucesso usando Java Script" time="6.453"/>
 </testsuite>
