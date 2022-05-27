@@ -233,8 +233,8 @@ public class ProjetoStep extends ProjetoRun {
     public static void tirarScreenshot(Scenario scenario) {
 
         //if (scenario.isFailed()) {
-            final byte[] screenshot = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES);
-            scenario.attach(screenshot, "image/png", "image");
+        final byte[] screenshot = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES);
+        scenario.attach(screenshot, "image/png", "image");
         //}
     }
 

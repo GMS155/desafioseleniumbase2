@@ -37,9 +37,9 @@ public class GlobalParameters {
         }
 
         BROWSER_DEFAULT = properties.getProperty("browser.default");
-//        EXECUTION = properties.getProperty("execution");
+        EXECUTION = properties.getProperty("execution");
 //        TIMEOUT_DEFAULT = Integer.parseInt(properties.getProperty("timeout.default"));
-//        SELENIUM_HUB = properties.getProperty("selenium.hub");
+        SELENIUM_HUB = properties.getProperty("selenium.hub");
 //        URL_DEFAULT = properties.getProperty("url.default");
 //        REPORT_NAME = properties.getProperty("report.name");
 //        GET_SCREENSHOT_FOR_EACH_STEP = Boolean.parseBoolean(properties.getProperty("get.screenshot.for.each.step"));

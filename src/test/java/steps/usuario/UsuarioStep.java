@@ -1,13 +1,19 @@
 package steps.usuario;
 
+import io.cucumber.java.After;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.pt.*;
 import org.junit.Assert;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import pages.LoginPage;
 import pages.UsuarioPage;
 import support.Utils;
 
 import java.time.Duration;
 import java.util.ArrayList;
+
+import static runner.RunBase.getDriver;
 
 public class UsuarioStep {
 
@@ -202,5 +208,14 @@ public class UsuarioStep {
     public void oSistemaDeveExcluirComSucesso() throws InterruptedException {
 
         Assert.assertNotEquals("Valida exclusão do usuário", usuarioPage.validaUsuarioExcluido(), "Usuario1");
+    }
+
+    @After
+    public static void tirarScreenshot(Scenario scenario) {
+
+        //if (scenario.isFailed()) {
+        final byte[] screenshot = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES);
+        scenario.attach(screenshot, "image/png", "image");
+        //}
     }
 }

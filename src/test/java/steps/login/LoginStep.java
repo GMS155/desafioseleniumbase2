@@ -1,9 +1,13 @@
 package steps.login;
 
 
+import io.cucumber.java.After;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.pt.*;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import pages.LoginPage;
 import runner.LoginRun;
 
@@ -65,8 +69,9 @@ public class LoginStep extends LoginRun {
     @Entao("a aplicacao deve permanecer na tela de login")
     public void aAplicacaoDevePermanecerNaTelaDeLogin() {
 
-        Boolean TestVisible = getDriver().findElement(By.id("tl_login_button")).isDisplayed();
-        Assert.assertTrue(TestVisible);
+        //Boolean TestVisible = getDriver().findElement(By.id("tl_login_button")).isDisplayed();
+
+        Assert.assertTrue(loginPage.permanecerTelaLogin());
     }
 
     @Dado("que o usuario esteja na pagina de login do Mantis")
@@ -99,5 +104,14 @@ public class LoginStep extends LoginRun {
         loginPage.preenchereUsuarioJS("administrator");
         loginPage.clicarEntrarJS();
         loginPage.preencherSenhaJS("root");
+    }
+
+    @After
+    public static void tirarScreenshot(Scenario scenario) {
+
+        //if (scenario.isFailed()) {
+        final byte[] screenshot = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES);
+        scenario.attach(screenshot, "image/png", "image");
+        //}
     }
 }

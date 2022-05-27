@@ -13,7 +13,7 @@ import org.openqa.selenium.TakesScreenshot;
         plugin = {"pretty","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
         monochrome = false,
         features = "classpath:features/projeto.feature",
-        tags = "@SoEsse",
+        //tags = "@SoEsse",
         glue = {"steps.projeto"},
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )
